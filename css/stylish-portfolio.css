@@ -252,5 +252,18 @@ footer {
 
 /* Modals */
 .modal-title{
-  text-align: center; 
+  text-align: center;
+}
+
+.modal-body{
+  text-align: center;
+}
+
+.modal-body > ul{
+  list-style:none;
+  padding:0;
+}
+
+modal-body > li{
+  display: inline;
 }
