@@ -137,7 +137,12 @@
                   <strong>E-Marketing</strong>
                 </h4>
                 <p>Plans that understand the values of small businesses.</p>
-                <a href="#" class="btn btn-light">Learn More</a>
+                
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#eMarketingLearnMore">
+                  Learn More
+                </button>
+                
               </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -356,6 +361,28 @@ $(function() {
     </div>
   </div>
   
-</body>
-
-</html>
+  <div class="modal fade" id="eMarketingLearnMore" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="eMarketingLearnMore">E-Marketing</h4>
+        </div>
+        <div class="modal-body">
+          <p>Every site I create is mobile responsive.<br>
+            This allows you to reach the greatest potential clients,<br>
+            regardless of how they access your site.<br></p>
+            <h3>Try It OUT.</h3>
+            <p>You can resize this site and notice how the web page behind adapts to the size of your browser!</p>
+            <!-- <p>Hide text only visible to if resized</p> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+  
+  </html>
+  
