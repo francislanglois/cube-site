@@ -249,3 +249,8 @@ hr.small {
 footer {
   padding: 100px 0;
 }
+
+/* Modals */
+.modal-title{
+  text-align: center; 
+}
