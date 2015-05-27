@@ -239,109 +239,99 @@
     </div>
   </aside>
   
-  <!-- Map -->
-  <!-- <section id="contact" class="map">
-  <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-  <br />
-  <small>
-  <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-</small>
-</iframe>
-</section> -->
-
-<!-- Footer -->
-<footer id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h4><strong>Make Your Online Presence a Reality</strong>
-        </h4>
-        <p>Toronto, ON</p>
-        <ul class="list-unstyled">
-          <li><i class="fa fa-phone fa-fw"></i> (647) 678-5854</li>
-          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">francis.langlois@gmail.com</a>
-          </li>
-        </ul>
-        <br>
-        <ul class="list-inline">
-          <li>
-            <a href="https://www.facebook.com/webdevfrancis"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/Franky_Langlois"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-          </li>
-          <li>
-            <a href="https://github.com/francislanglois"><i class="fa fa-github fa-fw fa-3x"></i></a>
-          </li>
-        </ul>
-        <hr class="small">
-        <p class="text-muted">Copyright &copy; Francis Langlois 2015</p>
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <h4><strong>Make Your Online Presence a Reality</strong>
+          </h4>
+          <p>Toronto, ON</p>
+          <ul class="list-unstyled">
+            <li><i class="fa fa-phone fa-fw"></i> (647) 678-5854</li>
+            <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">francis.langlois@gmail.com</a>
+            </li>
+          </ul>
+          <br>
+          <ul class="list-inline">
+            <li>
+              <a href="https://www.facebook.com/webdevfrancis"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Franky_Langlois"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/francislanglois"><i class="fa fa-github fa-fw fa-3x"></i></a>
+            </li>
+          </ul>
+          <hr class="small">
+          <p class="text-muted">Copyright &copy; Francis Langlois 2015</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script>
-// Closes the sidebar menu
-$("#menu-close").click(function(e) {
-  e.preventDefault();
-  $("#sidebar-wrapper").toggleClass("active");
-});
-
-// Opens the sidebar menu
-$("#menu-toggle").click(function(e) {
-  e.preventDefault();
-  $("#sidebar-wrapper").toggleClass("active");
-});
-
-// Scrolls to the selected menu item on the page
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-      
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- Custom Theme JavaScript -->
+  <script>
+  // Closes the sidebar menu
+  $("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
   });
-});
-</script>
-
-<!-- Modal -->
-<div class="modal fade" id="webLearnMore" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="webLearnMore">Website Development</h4>
-      </div>
-      <div class="modal-body">
-        <h4>I develop websites using the latest technologies such as:</h4>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Javascript</li>
-          <li>Ruby on Rails</li>
+  
+  // Opens the sidebar menu
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+  });
+  
+  // Scrolls to the selected menu item on the page
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+        
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  </script>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="webLearnMore" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="webLearnMore">Website Development</h4>
+        </div>
+        <div class="modal-body">
+          <h4>I develop websites using the latest technologies such as:</h4>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>Ruby on Rails</li>
+          </ul>
+          <br><h4>I focus on producing quality sites.</h4>
         </ul>
-        <br><h4>I focus on producing quality sites.</h4>
-      </ul>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 <div class="modal fade" id="mobileLearnMore" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
