@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-hard-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francislanglois/portfolioFrancis.git"
+  },
+  "author": "Francis Langlois",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francislanglois/portfolioFrancis/issues"
+  },
+  "homepage": "https://github.com/francislanglois/portfolioFrancis#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-sass": "^2.0.4"
+  }
+}
