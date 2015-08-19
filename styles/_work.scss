@@ -1,0 +1,43 @@
+.work{
+  height:100%;
+}
+.portfolio-peices{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+}
+
+.peice-1,
+.peice-2,
+.peice-3{
+  display:flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0 1% 5%;
+  height:380px;
+}
+
+.peice-1 .peice-img{
+  background: url("../assets/pic1.jpg");
+  background-size: cover;
+}
+
+.peice-2 .peice-img{
+  background: url("../assets/pic2.jpg");
+  background-size: cover;
+}
+
+.peice-3 .peice-img{
+  background: url("../assets/pic3.jpg");
+  background-size: cover;
+}
+
+.peice-img{
+  width:100%;
+  height:200px;
+  background-position:center;
+  background-repeat: no-repeat;
+
+}

@@ -1,3 +1,6 @@
+@import 'home';
+@import 'work';
+
 html,
 body{
   margin:0;
@@ -50,7 +53,7 @@ h1{
 
 .front{
   transform: translateZ(50vw);
-  background-color: rgba(20, 20, 20, 0.8 );
+  background-color: rgba(220, 220, 220, 0.8 );
   }
 
 .back{

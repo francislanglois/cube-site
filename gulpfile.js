@@ -9,7 +9,7 @@ gulp.task('styles', function() {
   //Return transformed file
   //We use the gulp.src method to tell gulp what files to look at.
   //This is a string that is a path that is relative to our gulpfile.js
-  return gulp.src ('styles/*.scss')
+  return gulp.src ('styles/style.scss')
   //We use the .pipe method to keep pushing the data along. gulp.src
   //will return our .scss and .pipe will push it into another function
   //in this case we push it into sass
