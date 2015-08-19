@@ -1,0 +1,73 @@
+#cube{
+  position:relative;
+  margin: 0 auto;
+  width:100vw;
+  height:100vh;
+  transform-style:preserve-3d;
+  transition: transform 1s;
+  transform: translateZ(-50vw);
+}
+
+.face{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding:0;
+  color:white;
+  font-size:20px;
+  border: white 1px solid;
+}
+
+.front{
+  transform: translateZ(50vw);
+  background-color: rgba(30, 30, 30, 0.85 );
+}
+
+.back{
+  transform: rotateY(180deg)   translateZ(50vw);
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.right{
+  transform: rotateY(90deg)   translateZ(50vw);
+  background-color: rgba(200, 200, 200, 0.85);
+}
+
+.left{
+  transform: rotateY(-90deg)   translateZ(50vw);
+  background-color: rgba(60, 60, 60, 0.85);
+}
+
+.top{
+  transform: rotateX(90deg)  translateZ(50vw);
+  background-color: rgba(50, 50, 50, 0);
+}
+
+.bottom{
+  transform: rotateX(-90deg)   translateZ(50vw);
+  background-color: rgba(50, 50, 50, 0);
+}
+
+#cube.show-front{
+  transform: translateZ(-50vw);
+}
+
+#cube.show-back{
+  transform: translateZ(-50vw) rotateY(180deg);
+}
+
+#cube.show-right{
+  transform: translateZ(-50vw) rotateY(-90deg)  ;
+}
+
+#cube.show-left{
+  transform: translateZ(-50vw) rotateY(90deg)  ;
+}
+
+#cube.show-top{
+  transform: translateZ(-50vw) rotateX(-90deg)  ;
+}
+
+#cube.show-bottom{
+  transform: translateZ(-50vw) rotateX(90deg)  ;
+}
