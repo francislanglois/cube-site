@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
+var watch = require('gulp-watch');
 
 //Setup gulp task, you can name it anything
 //We call it styles

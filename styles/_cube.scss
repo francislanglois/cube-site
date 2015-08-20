@@ -15,7 +15,6 @@
   padding:0;
   color:white;
   font-size:20px;
-  border: white 1px solid;
 }
 
 .front{
@@ -40,12 +39,12 @@
 
 .top{
   transform: rotateX(90deg)  translateZ(50vw);
-  background-color: rgba(50, 50, 50, 0);
+  background-color: rgba(20, 20, 20, 0.8);
 }
 
 .bottom{
   transform: rotateX(-90deg)   translateZ(50vw);
-  background-color: rgba(50, 50, 50, 0);
+  background-color: rgba(20, 20, 20, 0.8);
 }
 
 #cube.show-front{

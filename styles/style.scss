@@ -1,5 +1,10 @@
+*{
+  font-size: 10px;
+}
+
 @import 'cube';
 @import 'pyramid';
+@import 'nav';
 @import 'home';
 @import 'work';
 @import 'contact';
@@ -9,13 +14,14 @@ body{
   margin:0;
   height:100%;
   width:100%;
-  /*background:gray;*/
+  background:gray;
 }
 
 h1{
   font-family:"Century Gothic", sans-serif;
   font-weight:100;
   text-transform: uppercase;
+  font-size: 5rem;
 }
 
 .container{
@@ -25,10 +31,4 @@ h1{
   perspective:200vw;
   height:100%;
   width:100vw;
-}
-
-.nav-button{
-  position: absolute;
-  top:0px;
-  z-index:10;
 }
