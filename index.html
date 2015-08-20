@@ -7,10 +7,10 @@
 </head>
 <body>
   <nav>
-    <button class="show-front">Home</button>
-    <button class="show-right">Work</button>
-    <button class="show-left">Contact</button>
-    <button class="show-back">Passions</button>
+    <button class="show-front" data-hover="HOME">Home</button>
+    <button class="show-right" data-hover="WORK">Work</button>
+    <button class="show-left" data-hover="CONTACT">Contact</button>
+    <button class="show-back" data-hover="PASSIONS">Passions</button>
     
     <!-- <button class="show-top">Top</button>
     <button class="show-bottom">Bottom</button> -->
@@ -57,7 +57,23 @@
         </section> <!-- .work -->
       </div> <!-- .right .face -->
       <div class="face left">
-        <section class="contact"></section>
+        <section class="contact">
+          <h2>Get In Touch</h2>
+          <form action="">
+            <label for="name">NAME</label>
+            <input id="name" type="text" placeholder="NAME">
+            
+            <label for="email">E-MAIL</label>
+            <input id="email" type="email" placeholder="E-MAIL">
+            
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" placeholder="MESSAGE"></textarea>
+            
+            <input class="submit" type="submit" value="SUBMIT">
+          </form>
+          <div class="social">
+          </div>
+        </section><!-- .contact -->
       </div><!-- .left .face -->
       <div class="face top">Top</div>
       <div class="face bottom">Bottom</div>

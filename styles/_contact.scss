@@ -1,9 +1,67 @@
 .contact{
-  height:100%;
-  width:100%;
   background: url("../assets/icon-orange.png");
   background-repeat: no-repeat;
   background-size:85%;
   background-position-x:222%;
   background-position-y:-8%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height:100%;
+  width:100%;
+  
+  h2{
+    font-size: 3rem;
+    height:3.2rem;
+    margin:0;
+    text-align: center;
+    width: 100%;
+  }
+  form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+  }
+  
+  label{
+    align-self: flex-start;
+    font-size: 2rem;
+    margin: 2% 0 1%;
+    padding-left: 30%;
+  }
+  
+  input,
+  textarea{
+    background:rgba(190, 190, 190, 0.8);
+    border: none;
+    border-radius: 5px;
+    font-size:1.5rem;
+    height: 3rem;
+    padding-left:10px;
+    width: 40%;
+  }
+  
+  textarea{
+    height: 175px;
+    padding-top: 10px;
+  }
+  
+  .submit{
+    background: rgba(30, 30, 30, 0.9);
+    border:none;
+    color:$orange;
+    cursor: pointer;
+    height: 4rem;
+    margin-top: 20px;
+    width: 12rem;
+  }
+  
+  ::-webkit-input-placeholder{
+    color:rgba(40, 40, 40, 0.9);
+  }
+  .social{
+    width:30%;
+  }
 }
