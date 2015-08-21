@@ -15,6 +15,6 @@ $('button').on('click', function(){
     $('nav button').css('color', 'rgba(225, 105, 10, 1)')
   }
   else {
-    $('nav button').css('color', 'rgba(115, 95, 145, 1)')
+    $('nav button').css('color', 'rgba(130, 70, 225, 1)')
   }
 });
