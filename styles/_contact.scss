@@ -7,8 +7,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height:100%;
-  width:100%;
+  padding-left:0;
   
   h2{
     font-size: 3rem;
@@ -76,22 +75,29 @@
     width: 100%;
   }
   
+  a,
   i,
   p{
+    color:white;
     font-size: 2rem;
     margin: 1%;
     text-align: center;
   }
-  i{
+  
+  a{
     margin: 2% 4%;
     border: 1px white solid;
     border-radius: 50%;
     width:3.2rem;
     height:2.5rem;
-    padding-top:2.5%;
+    padding-top:1.5%;
   }
-  .fa-envelope-o{
-    padding-top:2%;
-    height:2.6rem;
+  
+  a:hover{
+    color:$orange;
+    border: $orange 1px solid;
+    .fa{
+      color:$orange;
+    }
   }
 }
