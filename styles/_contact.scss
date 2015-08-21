@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:70%;
+    width:60%;
   }
   
   label{
@@ -42,9 +42,18 @@
     width: 40%;
   }
   
+  input:focus,
+  textarea:focus{
+    outline-color: $orange;
+    box-shadow:$orange;
+  }
+  
   textarea{
     height: 175px;
     padding-top: 10px;
+  }
+  .name{
+    padding-top:0;
   }
   
   .submit{
@@ -55,42 +64,55 @@
     height: 4rem;
     margin-top: 20px;
     width: 12rem;
+    transition: 1s all;
   }
   
+  .submit:hover{
+    background: rgba(20, 20, 20, 0.9);
+    color: lighten($orange, 15%);
+  }
   ::-webkit-input-placeholder{
     color:rgba(40, 40, 40, 0.9);
   }
   .contact-info{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     justify-content: center;
     width:30%;
   }
   
+  span{
+    color:$orange;
+    font-weight:600;
+    font-size:2.2rem;
+  }
+  
   .social{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
   }
   
   a,
   i,
-  p{
+  p
+  {
     color:white;
     font-size: 2rem;
-    margin: 1%;
+    margin: 0.5px;
     text-align: center;
   }
   
   a{
-    margin: 2% 4%;
+    margin: 8px 16px;
     border: 1px white solid;
     border-radius: 50%;
-    width:3.2rem;
-    height:2.5rem;
-    padding-top:1.5%;
+    width:40px;
+    height:40px;
+    padding-top:8px;
+    transition: all 1s;
   }
   
   a:hover{
@@ -99,5 +121,9 @@
     .fa{
       color:$orange;
     }
+  }
+  
+  a:nth-child(0n+1){
+    margin-left:0;
   }
 }

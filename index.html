@@ -9,7 +9,7 @@
 <body>
   <nav>
     <button class="show-front" data-hover="HOME">Home</button>
-    <button class="show-right" data-hover="WORK">Work</button>
+    <button class="show-right" data-hover="MY WORK">My Work</button>
     <button class="show-left" data-hover="CONTACT">Contact</button>
     <button class="show-back" data-hover="PASSIONS">Passions</button>
     
@@ -21,9 +21,9 @@
     <div id="cube">
       <div class="face front">
         <section class="home">
-          <h1><span>Francis</span> Langlois</h1>
+          <h1><span>Francis</span> Lang<span>|</span>ois</h1>
           <div class="about-me">
-            <h2>About Me</h2>
+            <!-- <h2>About Me</h2> -->
             <p>I'm a web developer that is focused on building beautiful and responsive websites. I have a Marketing Business degree and love helping entrepreneurs and small businesses meet their digital goals.</p>
             <p>By being a small business owner myself I understand the complications and hard work that can go into your craft. I suggest digital strategies and use my knowledge of technologies to implement and create a unique experience for your client base.</p>
           </div><!-- .about-me -->
@@ -34,7 +34,6 @@
       </div><!-- .back .face -->
       <div class="face right">
         <section class="work">
-          <h2>Work</h2>
           <div class="portfolio-peices">
             <div class="peice-1">
               <div class="peice-img"></div>
@@ -59,7 +58,7 @@
       </div> <!-- .right .face -->
       <div class="face left">
         <section class="contact">
-          <h2>Get In Touch</h2>
+          <!-- <h2>Get In Touch</h2> -->
           <form action="">
             <label for="name">NAME</label>
             <input id="name" type="text" placeholder="NAME">
@@ -73,12 +72,13 @@
             <input class="submit" type="submit" value="SUBMIT">
           </form>
           <div class="contact-info">
-            <p>e: francis.langlois@gmail.com</p>
-            <p>ph: 647-678-5854</p>
+            <p><span>e:</span> francis.langlois@gmail.com</p>
+            <p><span>ph:</span> 647-678-5854</p>
             <div class="social">
-              <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-              <a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-envelope-o"></i></a>
+              <a href="https://www.facebook.com/webdevfrancis?ref=aymt_homepage_panel" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?screen_name=frankylanglois"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/profile/view?id=AAMAABARTDwB6rVUKAlHDVVY_ccq28FJJ1KS6Xc&trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto:francis.langlois@gmail.com"><i class="fa fa-envelope-o"></i></a>
             </div><!-- .social -->
           </div><!-- .contact-info -->
         </section><!-- .contact -->
@@ -94,6 +94,7 @@
   <div class="pyramid-base"></div>
 </div> <!-- #pyramid --> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <script src="scripts/script.js"></script>
 </body>
 
