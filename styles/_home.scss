@@ -21,6 +21,23 @@
     width:40%;
   }
   p{
-    font-size:1.5rem;
+    font-size:2rem;
+  }
+  
+  @media(max-width:850px){
+    .about-me{
+      width:50%;
+    }
+  }
+  @media(max-width:615px){
+    .about-me{
+      width:60%;
+    }
+  }
+  
+  @media(max-width: 440px){
+    .about-me{
+      width:90%;
+    }
   }
 }

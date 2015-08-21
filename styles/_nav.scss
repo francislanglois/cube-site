@@ -37,9 +37,17 @@ nav{
   }
   
   button:hover::before,
-  button:active::before,
-  button:focus::before{
+  button:active::before{
     max-width: 100%;
     border:1px white solid;
+    outline-color: none;
+    box-shadow: none;
+  }
+  button:hover,
+  button:focus,
+  button:active{
+    cursor: pointer;
+    outline-color: transparent;
+    box-shadow: none;
   }
 }

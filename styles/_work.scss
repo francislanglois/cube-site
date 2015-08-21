@@ -20,6 +20,29 @@
     
     @media(max-width: 940px){
       flex-direction: column;
+      .peice-img{
+        width:0;
+        height:0;
+      }
+      .peice-1{
+        background: linear-gradient(rgba(60, 60, 60, 0.65), rgba(60, 60, 60, 0.65)), url("../assets/pic1.jpg");
+      }
+      
+      .peice-2{
+        background: linear-gradient(rgba(60, 60, 60, 0.65), rgba(60, 60, 60, 0.65)), url("../assets/pic2.jpg");
+      }
+      
+      .peice-3{
+        background: linear-gradient(rgba(60, 60, 60, 0.65), rgba(60, 60, 60, 0.65)), url("../assets/pic3.jpg");
+      }
+      
+      .peice-1,
+      .peice-2,
+      .peice-3{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
     }
   }
   
