@@ -6,39 +6,41 @@
   transform-style: preserve-3d;
   animation: spin 10s linear infinite;
   transform-origin:116px 200px 116px;
-
+  
   div{
-    position:absolute;
     border-style: solid;
     border-width: 200px 0 200px 346px;
+    position:absolute;
     transform-origin: 0 0;
   }
-
+  
   div:after{
-    position: absolute;
+    color: white;
+    content:"Just a spinning pyramid";
     left: -250px;
+    position: absolute;
   }
-
+  
   .pyramid-front{
     border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
     transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
   }
-
+  
   .pyramid-right{
     border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
     transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
   }
-
+  
   .pyramid-left{
     border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
     transform: rotateX(60deg) rotateY(19.5deg);
   }
-
+  
   .pyramid-base{
     border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
     transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
   }
-
+  
 }
 
 @keyframes spin{

@@ -6,22 +6,29 @@
   background-position-x:222%;
   background-position-y:-8%;
   
-  h1 span{
+  h1 .colored-header{
     color: $green;
     font-family:"Century Gothic", sans-serif;
-    font-weight:100;
-    text-transform: uppercase;
     font-size: 5rem;
+    font-weight:100;
+    margin-bottom: 1%;
+    text-transform: uppercase;
   }
   
   h2{
     font-size: 3rem;
   }
+  
+  h3{
+    font-size:1.4rem;
+    margin:0;
+    padding:0;
+  }
   .about-me{
     width:40%;
   }
   p{
-    font-size:2rem;
+    font-size:1.8rem;
   }
   
   @media(max-width:850px){

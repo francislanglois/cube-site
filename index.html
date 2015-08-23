@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <title>Web Dev - F. Langlois</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/style.css">
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
   <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <nav>
     <button class="show-front" data-hover="HOME">Home</button>
     <button class="show-right" data-hover="MY WORK">My Work</button>
     <button class="show-left" data-hover="CONTACT">Contact</button>
-    <button class="show-back" data-hover="PASSIONS">Passions</button>
+    <button class="show-back" data-hover="ABOUT ME">About Me</button>
     
     <!-- <button class="show-top">Top</button>
     <button class="show-bottom">Bottom</button> -->
@@ -23,11 +25,12 @@
     <div id="cube">
       <div class="face front">
         <section class="home">
-          <h1><span>Francis</span> Lang<span>|</span>ois</h1>
+          <h1><span class="colored-header">Francis</span> Lang<span class="colored-header">|</span>ois</h1>
+          <h3>{web developer}</h3>
           <div class="about-me">
             <!-- <h2>About Me</h2> -->
-            <p>I'm a web developer that is focused on building beautiful and responsive websites. I have a Marketing Business degree and love helping entrepreneurs and small businesses meet their digital goals.</p>
-            <p>By being a small business owner myself I understand the complications and hard work that can go into your craft. I suggest digital strategies and use my knowledge of technologies to implement and create a unique experience for your client base.</p>
+            <p>I'm a web developer that is focused on building beautiful and responsive websites. I always push myself and the technology that I know to create something that people take pleasure in using.</p>
+            <p>I enjoy interacting with clients and find out how we can meet their needs and build the technology that helps them. With my Marketing background I understand that there's somebody behind the code that we build.</p>
           </div><!-- .about-me -->
         </section> <!-- .home -->
       </div> <!-- .front .face-->
@@ -74,7 +77,7 @@
             <input class="submit" type="submit" value="SUBMIT">
           </form>
           <div class="contact-info">
-            <p><span>e:</span> francis.langlois@gmail.com</p>
+            <p><span>e:</span> francis.langlois<span>@</span>gmail.com</p>
             <p><span>ph:</span> 647-678-5854</p>
             <div class="social">
               <a href="https://www.facebook.com/webdevfrancis?ref=aymt_homepage_panel" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -89,15 +92,15 @@
       <div class="face bottom">Bottom</div> -->
     </div> <!-- .top .face -->
   </div> <!-- #cube -->
-  <!-- <div id="pyramid">
-  <div class="pyramid-front"></div>
-  <div class="pyramid-right"></div>
-  <div class="pyramid-left"></div>
-  <div class="pyramid-base"></div>
-</div> <!-- #pyramid --> -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<script src="scripts/script.js"></script>
+  <div id="pyramid">
+    <div class="pyramid-front"></div>
+    <div class="pyramid-right"></div>
+    <div class="pyramid-left"></div>
+    <div class="pyramid-base"></div>
+  </div> <!-- #pyramid -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
