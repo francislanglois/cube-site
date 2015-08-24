@@ -60,12 +60,13 @@
   .submit{
     background: rgba(30, 30, 30, 0.9);
     border:none;
+    border-radius:5px;
     color:$orange;
     cursor: pointer;
     height: 4rem;
     margin-top: 20px;
     width: 12rem;
-    transition: 1s all;
+    transition: 0.5s all;
   }
   
   .submit:hover{
