@@ -1,670 +1,683 @@
 * {
   font-size: 10px;
   font-family: 'PT Serif', 'Georgia', serif; }
-
-*, *:before, *:after, html {
-  box-sizing: border-box; }
-
-body {
-  overflow-x: hidden; }
-
-.hidden {
-  display: none;
-  height: 0;
-  width: 0; }
-
-#cube {
-  position: relative;
-  margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  -webkit-transform: translateZ(-50vw);
-  transform: translateZ(-50vw); }
-
-.face {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  color: white;
-  font-size: 20px; }
-
-.front {
-  -webkit-transform: translateZ(50vw);
-  transform: translateZ(50vw);
-  background-color: rgba(30, 30, 30, 0.85); }
-
-.back {
-  -webkit-transform: rotateY(180deg) translateZ(50vw);
-  transform: rotateY(180deg) translateZ(50vw);
-  background-color: rgba(50, 50, 50, 0.8); }
-
-.right {
-  -webkit-transform: rotateY(90deg) translateZ(50vw);
-  transform: rotateY(90deg) translateZ(50vw);
-  background-color: rgba(20, 20, 20, 0.85); }
-
-.left {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw);
-  transform: rotateY(-90deg) translateZ(50vw);
-  background-color: rgba(60, 60, 60, 0.85); }
-
-.top {
-  -webkit-transform: rotateX(90deg) translateZ(50vw);
-  transform: rotateX(90deg) translateZ(50vw);
-  background-color: rgba(20, 20, 20, 0.8); }
-
-.bottom {
-  -webkit-transform: rotateX(-90deg) translateZ(50vw);
-  transform: rotateX(-90deg) translateZ(50vw);
-  background-color: rgba(20, 20, 20, 0.8); }
-
-#cube.show-front {
-  -webkit-transform: translateZ(-50vw);
-  transform: translateZ(-50vw); }
-
-#cube.show-back {
-  -webkit-transform: translateZ(-50vw) rotateY(180deg);
-  transform: translateZ(-50vw) rotateY(180deg); }
-
-#cube.show-right {
-  -webkit-transform: translateZ(-50vw) rotateY(-90deg);
-  transform: translateZ(-50vw) rotateY(-90deg); }
-
-#cube.show-left {
-  -webkit-transform: translateZ(-50vw) rotateY(90deg);
-  transform: translateZ(-50vw) rotateY(90deg); }
-
-#cube.show-top {
-  -webkit-transform: translateZ(-50vw) rotateX(-90deg);
-  transform: translateZ(-50vw) rotateX(-90deg); }
-
-#cube.show-bottom {
-  -webkit-transform: translateZ(-50vw) rotateX(90deg);
-  transform: translateZ(-50vw) rotateX(90deg); }
-
-#pyramid {
-  position: relative;
-  margin: 100px auto;
-  height: 500px;
-  width: 100px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-animation: spin 10s linear infinite;
-  animation: spin 10s linear infinite;
-  -webkit-transform-origin: 116px 200px 116px;
-  transform-origin: 116px 200px 116px; }
-  #pyramid div {
-    border-style: solid;
-    border-width: 200px 0 200px 346px;
-    position: absolute;
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0; }
-  #pyramid div:after {
-    color: white;
-    content: "Just a spinning pyramid";
-    left: -250px;
-    position: absolute; }
-  #pyramid .pyramid-front {
-    border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
-    -webkit-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
-    transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px); }
-  #pyramid .pyramid-right {
-    border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
-    -webkit-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
-    transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px); }
-  #pyramid .pyramid-left {
-    border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
-    -webkit-transform: rotateX(60deg) rotateY(19.5deg);
-    transform: rotateX(60deg) rotateY(19.5deg); }
-  #pyramid .pyramid-base {
-    border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
-    -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
-    transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px); }
-
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-  to {
-    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }
-
-@keyframes spin {
-  from {
-    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-  to {
-    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }
-
-nav {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding-right: 5%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10; }
-  nav button {
-    background: none;
-    border: 1px solid transparent;
-    color: #3cb90f;
-    display: inline-block;
-    font-family: 'Century Gothic', sans-serif;
-    margin: 2% 10px;
-    padding: 3px 1px 0;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 1.6rem; }
-  nav button::before {
-    background: none;
-    border: 1px transparent solid;
-    color: white;
-    content: attr(data-hover);
-    display: inline-block;
-    left: 0;
-    margin: 0;
-    max-width: 0;
-    overflow: hidden;
-    padding: 2px 0 0;
-    position: absolute;
-    top: 0;
-    transition: all 1s;
-    white-space: pre; }
-  nav button:hover::before,
-  nav button:active::before {
-    max-width: 100%;
-    border: 1px white solid;
-    outline-color: none;
-    box-shadow: none; }
-  nav button:hover,
-  nav button:focus,
-  nav button:active {
-    cursor: pointer;
-    outline-color: transparent;
-    box-shadow: none; }
-
-.mobile-nav {
-  display: none;
-  left: 30px;
-  position: absolute;
-  top: 10px;
-  z-index: 1; }
-
-.menu-btn div {
-  font-size: 1.8rem;
-  font-weight: 200;
-  left: 100%;
-  line-height: 1.2;
-  margin-top: -0.5rem;
-  padding-right: 8px;
-  position: absolute;
-  top: 64%;
-  z-index: 99; }
-
-.menu-btn span {
-  display: block;
-  width: 19px;
-  height: 3px;
-  margin: 4px 0;
-  background: #f0f0f0;
-  z-index: 99; }
-
-.expand {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  left: 20px; }
-
-.responsive-menu {
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 150px; }
-  .responsive-menu button {
-    width: 90px; }
-  .responsive-menu button:hover,
-  .responsive-menu button:focus,
-  .responsive-menu button:active {
-    color: white;
-    border: none; }
-  .responsive-menu button:hover::before,
-  .responsive-menu button:active::before {
-    max-width: 0;
-    border: none;
-    outline-color: none;
-    box-shadow: none; }
-
-@media (max-width: 500px) {
-  .mobile-nav {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-  nav {
-    display: none; } }
-
-.home {
-  height: 100%;
-  background: url("../assets/icon-green.png");
-  background-repeat: no-repeat;
-  background-size: 85%;
-  background-position-x: 222%;
-  background-position-y: -8%; }
-  .home h1 .colored-header {
-    color: #3cb90f;
-    font-family: "Century Gothic", sans-serif;
-    font-size: 5rem;
-    font-weight: 100;
-    margin-bottom: 1%;
-    text-transform: uppercase; }
-  .home h2 {
-    font-size: 3rem; }
-  .home h3 {
-    font-size: 1.4rem;
-    margin: 0;
-    padding: 0; }
-  .home .about-me {
-    width: 40%; }
-  .home p {
-    font-size: 1.8rem; }
-  @media (max-width: 850px) {
-    .home .about-me {
-      width: 50%; } }
-  @media (max-width: 615px) {
-    .home .about-me {
-      width: 60%; } }
-  @media (max-width: 440px) {
-    .home .about-me {
-      width: 90%; } }
-
-.work {
-  height: 100%;
-  background: url("../assets/icon-charcoal.png");
-  background-repeat: no-repeat;
-  background-size: 85%;
-  background-position-x: 222%;
-  background-position-y: -8%;
-  padding-left: 0; }
-  .work h2 {
-    color: #4baac8;
-    font-family: "Century Gothic", sans-serif;
-    font-size: 1.7rem;
-    text-align: left; }
-  .work .portfolio-peices {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 100%; }
-  .work .peice-buttons {
-    width: 0;
-    height: 0;
-    display: none; }
-    .work .peice-buttons button {
-      width: 0;
-      height: 0;
-      display: none;
-      color: white; }
-    .work .peice-buttons .selected {
-      color: #4baac8; }
-  .work .peice-1,
-  .work .peice-2,
-  .work .peice-3 {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 270px;
-    margin: 0 1% 5%;
-    height: 440px; }
-    .work .peice-1 p,
-    .work .peice-2 p,
-    .work .peice-3 p {
-      font-size: 1.5rem; }
-    .work .peice-1 .buttons,
-    .work .peice-2 .buttons,
-    .work .peice-3 .buttons {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row; }
-    .work .peice-1 button,
-    .work .peice-2 button,
-    .work .peice-3 button {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      background: rgba(55, 55, 55, 0.9);
-      border: none;
-      border-radius: 5px;
-      color: #4baac8;
-      cursor: pointer;
-      height: 4rem;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      margin-top: 20px;
-      transition: 0.5s all linear;
-      width: 11rem; }
-    .work .peice-1 button:hover,
-    .work .peice-2 button:hover,
-    .work .peice-3 button:hover {
-      background: rgba(40, 40, 40, 0.9);
-      color: #2e7f98; }
-    .work .peice-1 h4,
-    .work .peice-2 h4,
-    .work .peice-3 h4 {
-      margin: 0; }
-    .work .peice-1 .source-code,
-    .work .peice-2 .source-code,
-    .work .peice-3 .source-code {
-      margin-left: 5%; }
-    .work .peice-1 .live-site,
-    .work .peice-2 .live-site,
-    .work .peice-3 .live-site {
-      margin-left: 5px;
-      width: 7rem; }
-    .work .peice-1 i,
-    .work .peice-2 i,
-    .work .peice-3 i {
-      font-size: 2.5rem; }
-    .work .peice-1 a,
-    .work .peice-2 a,
-    .work .peice-3 a {
-      text-decoration: none; }
-  .work .peice-1 .peice-img {
-    background: url("../assets/pic1a.png"); }
-  .work .peice-2 .peice-img {
-    background: url("../assets/pic2a.png"); }
-  .work .peice-3 .peice-img {
-    background: url("../assets/pic3a.png"); }
-  .work .peice-1 .peice-img,
-  .work .peice-2 .peice-img,
-  .work .peice-3 .peice-img {
-    width: 270px;
-    height: 175px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  @media (max-width: 940px) {
-    .work .portfolio-peices {
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .work .hidden {
-      display: none;
-      height: 0;
-      width: 0; }
-    .work .displayed-peice {
-      width: 70%;
-      margin: 0;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      padding-left: 15%; }
-    .work .peice-content {
-      width: 270px; }
-    .work .peice-buttons {
-      width: 25%;
-      height: auto;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-      .work .peice-buttons button {
-        width: 100%;
-        height: auto;
-        display: block;
-        background: none;
-        border: none; }
-      .work .peice-buttons h4 {
-        font-size: 1.6rem;
-        margin: 3% 0; } }
-  @media (max-width: 500px) {
-    .work .portfolio-peices {
-      -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      margin-left: 1%; }
-    .work .peice-1,
-    .work .peice-2,
-    .work .peice-3 {
-      padding: 0;
-      margin-top: 2%; }
-    .work .peice-buttons {
-      width: 90%;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row; } }
-
-.contact {
-  background: url("../assets/icon-orange.png");
-  background-repeat: no-repeat;
-  background-size: 85%;
-  background-position-x: 222%;
-  background-position-y: -8%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0; }
-  .contact h2 {
-    font-size: 3rem;
-    height: 3.2rem;
-    margin: 0;
-    text-align: center;
-    width: 100%; }
-  .contact form {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 60%; }
-  .contact label {
-    -webkit-align-self: flex-start;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-    font-size: 2rem;
-    margin: 2% 0 1%;
-    padding-left: 30%; }
-  .contact input,
-  .contact textarea {
-    background: rgba(190, 190, 190, 0.8);
-    border: none;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    height: 3rem;
-    padding-left: 10px;
-    width: 40%;
-    min-width: 200px; }
-  .contact input:focus,
-  .contact textarea:focus {
-    outline-color: #e1690a;
-    box-shadow: #e1690a; }
-  .contact textarea {
-    height: 175px;
-    padding-top: 10px; }
-  .contact .name {
-    padding-top: 0; }
-  .contact .submit {
-    background: rgba(30, 30, 30, 0.9);
-    border: none;
-    border-radius: 5px;
-    color: #e1690a;
-    cursor: pointer;
-    height: 4rem;
-    margin-top: 20px;
-    width: 12rem;
-    transition: 0.5s all; }
-  .contact .submit:hover {
-    background: rgba(20, 20, 20, 0.9);
-    color: #f79141; }
-  .contact ::-webkit-input-placeholder {
-    color: rgba(40, 40, 40, 0.9); }
-  .contact .contact-info {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 30%; }
-  .contact span {
-    color: #e1690a;
-    font-weight: 600;
-    font-size: 2.2rem; }
-  .contact .social {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    width: 100%; }
-  .contact a,
-  .contact i,
-  .contact
-p {
-    color: white;
-    font-size: 2rem;
-    margin: 0.5px;
-    text-align: center; }
-  .contact a {
-    margin: 8px 16px;
-    border: 1px white solid;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding-top: 4.5px;
-    transition: all 1s; }
-  .contact a:hover {
-    color: #e1690a;
-    border: #e1690a 1px solid; }
-    .contact a:hover .fa {
-      color: #e1690a; }
-  .contact a:nth-child(0n+1) {
-    margin-left: 0; }
-  @media (max-width: 880px) {
-    .contact form,
-    .contact .contact-info {
-      width: 100%; }
-    .contact .contact-info,
-    .contact .social {
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
-
-.about {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0;
-  margin: 0; }
-  .about p {
-    font-size: 1.4rem;
-    width: 60%; }
-
-html,
-body {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  background: gray; }
-
-section {
-  height: 94%;
-  margin-top: 5%;
-  padding-left: 5%;
-  width: 100%; }
-
-h1 {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 5rem;
-  font-weight: 100;
-  margin-bottom: 0;
-  text-transform: uppercase; }
-
-.container {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  -webkit-perspective: 200vw;
-  perspective: 200vw;
-  position: relative;
-  width: 98vw; }
+  
+  *, *:before, *:after, html {
+    box-sizing: border-box; }
+    
+    body {
+      overflow-x: hidden; }
+      
+      .hidden {
+        display: none;
+        height: 0;
+        width: 0; }
+        
+        #cube {
+          position: relative;
+          margin: 0 auto;
+          width: 100vw;
+          height: 100vh;
+          -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+          transition: -webkit-transform 1s;
+          transition: transform 1s;
+          -webkit-transform: translateZ(-50vw);
+          transform: translateZ(-50vw); }
+          
+          .face {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            color: white;
+            font-size: 20px; }
+            
+            .front {
+              -webkit-transform: translateZ(50vw);
+              transform: translateZ(50vw);
+              background-color: rgba(30, 30, 30, 0.85); }
+              
+              .back {
+                -webkit-transform: rotateY(180deg) translateZ(50vw);
+                transform: rotateY(180deg) translateZ(50vw);
+                background-color: rgba(50, 50, 50, 0.8); }
+                
+                .right {
+                  -webkit-transform: rotateY(90deg) translateZ(50vw);
+                  transform: rotateY(90deg) translateZ(50vw);
+                  background-color: rgba(20, 20, 20, 0.85); }
+                  
+                  .left {
+                    -webkit-transform: rotateY(-90deg) translateZ(50vw);
+                    transform: rotateY(-90deg) translateZ(50vw);
+                    background-color: rgba(60, 60, 60, 0.85); }
+                    
+                    .top {
+                      -webkit-transform: rotateX(90deg) translateZ(50vw);
+                      transform: rotateX(90deg) translateZ(50vw);
+                      background-color: rgba(20, 20, 20, 0.8); }
+                      
+                      .bottom {
+                        -webkit-transform: rotateX(-90deg) translateZ(50vw);
+                        transform: rotateX(-90deg) translateZ(50vw);
+                        background-color: rgba(20, 20, 20, 0.8); }
+                        
+                        #cube.show-front {
+                          -webkit-transform: translateZ(-50vw);
+                          transform: translateZ(-50vw); }
+                          
+                          #cube.show-back {
+                            -webkit-transform: translateZ(-50vw) rotateY(180deg);
+                            transform: translateZ(-50vw) rotateY(180deg); }
+                            
+                            #cube.show-right {
+                              -webkit-transform: translateZ(-50vw) rotateY(-90deg);
+                              transform: translateZ(-50vw) rotateY(-90deg); }
+                              
+                              #cube.show-left {
+                                -webkit-transform: translateZ(-50vw) rotateY(90deg);
+                                transform: translateZ(-50vw) rotateY(90deg); }
+                                
+                                #cube.show-top {
+                                  -webkit-transform: translateZ(-50vw) rotateX(-90deg);
+                                  transform: translateZ(-50vw) rotateX(-90deg); }
+                                  
+                                  #cube.show-bottom {
+                                    -webkit-transform: translateZ(-50vw) rotateX(90deg);
+                                    transform: translateZ(-50vw) rotateX(90deg); }
+                                    
+                                    #pyramid {
+                                      position: relative;
+                                      margin: 100px auto;
+                                      height: 500px;
+                                      width: 100px;
+                                      -webkit-transform-style: preserve-3d;
+                                      transform-style: preserve-3d;
+                                      -webkit-animation: spin 10s linear infinite;
+                                      animation: spin 10s linear infinite;
+                                      -webkit-transform-origin: 116px 200px 116px;
+                                      transform-origin: 116px 200px 116px; }
+                                      #pyramid div {
+                                        border-style: solid;
+                                        border-width: 200px 0 200px 346px;
+                                        position: absolute;
+                                        -webkit-transform-origin: 0 0;
+                                        transform-origin: 0 0; }
+                                        #pyramid div:after {
+                                          color: white;
+                                          content: "Just a spinning pyramid";
+                                          left: -250px;
+                                          position: absolute; }
+                                          #pyramid .pyramid-front {
+                                            border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
+                                            -webkit-transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
+                                            transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px); }
+                                            #pyramid .pyramid-right {
+                                              border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
+                                              -webkit-transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+                                              transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px); }
+                                              #pyramid .pyramid-left {
+                                                border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
+                                                -webkit-transform: rotateX(60deg) rotateY(19.5deg);
+                                                transform: rotateX(60deg) rotateY(19.5deg); }
+                                                #pyramid .pyramid-base {
+                                                  border-color: transparent transparent transparent rgba(50, 50, 50, 0.6);
+                                                  -webkit-transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
+                                                  transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px); }
+                                                  
+                                                  @-webkit-keyframes spin {
+                                                    from {
+                                                      -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                                                      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+                                                      to {
+                                                        -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+                                                        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }
+                                                        
+                                                        @keyframes spin {
+                                                          from {
+                                                            -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                                                            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+                                                            to {
+                                                              -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+                                                              transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }
+                                                              
+                                                              nav {
+                                                                display: -webkit-flex;
+                                                                display: -ms-flexbox;
+                                                                display: flex;
+                                                                -webkit-flex-direction: row;
+                                                                -ms-flex-direction: row;
+                                                                flex-direction: row;
+                                                                -webkit-justify-content: flex-end;
+                                                                -ms-flex-pack: end;
+                                                                justify-content: flex-end;
+                                                                padding-right: 5%;
+                                                                position: absolute;
+                                                                top: 0;
+                                                                width: 100%;
+                                                                z-index: 10; }
+                                                                nav button {
+                                                                  background: none;
+                                                                  border: 1px solid transparent;
+                                                                  color: #3cb90f;
+                                                                  display: inline-block;
+                                                                  font-family: 'Century Gothic', sans-serif;
+                                                                  margin: 2% 10px;
+                                                                  padding: 3px 1px 0;
+                                                                  position: relative;
+                                                                  text-transform: uppercase;
+                                                                  font-size: 1.6rem; }
+                                                                  nav button::before {
+                                                                    background: none;
+                                                                    border: 1px transparent solid;
+                                                                    color: white;
+                                                                    content: attr(data-hover);
+                                                                    display: inline-block;
+                                                                    left: 0;
+                                                                    margin: 0;
+                                                                    max-width: 0;
+                                                                    overflow: hidden;
+                                                                    padding: 2px 0 0;
+                                                                    position: absolute;
+                                                                    top: 0;
+                                                                    transition: all 1s;
+                                                                    white-space: pre; }
+                                                                    nav button:hover::before,
+                                                                    nav button:active::before {
+                                                                      max-width: 100%;
+                                                                      border: 1px white solid;
+                                                                      outline-color: transparent;
+                                                                      box-shadow: none; }
+                                                                      nav button:hover,
+                                                                      nav button:focus,
+                                                                      nav button:active {
+                                                                        cursor: pointer;
+                                                                        outline-color: transparent;
+                                                                        box-shadow: none; }
+                                                                        .mobile-nav {
+                                                                          display: none;
+                                                                          left: 30px;
+                                                                          position: absolute;
+                                                                          top: 10px;
+                                                                          z-index: 1; }
+                                                                          
+                                                                          .menu-btn div {
+                                                                            font-size: 1.8rem;
+                                                                            font-weight: 200;
+                                                                            left: 100%;
+                                                                            line-height: 1.2;
+                                                                            margin-top: -0.5rem;
+                                                                            padding-right: 8px;
+                                                                            position: absolute;
+                                                                            top: 64%;
+                                                                            z-index: 99; }
+                                                                            
+                                                                            .menu-btn span {
+                                                                              display: block;
+                                                                              width: 19px;
+                                                                              height: 3px;
+                                                                              margin: 4px 0;
+                                                                              background: #f0f0f0;
+                                                                              z-index: 99; }
+                                                                              
+                                                                              .expand {
+                                                                                display: -webkit-flex;
+                                                                                display: -ms-flexbox;
+                                                                                display: flex;
+                                                                                left: 20px; }
+                                                                                
+                                                                                .responsive-menu {
+                                                                                  background: rgba(0, 0, 0, 0.8);
+                                                                                  -webkit-flex-direction: column;
+                                                                                  -ms-flex-direction: column;
+                                                                                  flex-direction: column;
+                                                                                  width: 150px; }
+                                                                                  .responsive-menu button {
+                                                                                    width: 90px; }
+                                                                                    .responsive-menu button:hover,
+                                                                                    .responsive-menu button:focus,
+                                                                                    .responsive-menu button:active {
+                                                                                      color: white;
+                                                                                      border: none; }
+                                                                                      .responsive-menu button:hover::before,
+                                                                                      .responsive-menu button:active::before {
+                                                                                        max-width: 0;
+                                                                                        border: none;
+                                                                                        outline-color: none;
+                                                                                        box-shadow: none; }
+                                                                                        
+                                                                                        @media (max-width: 500px) {
+                                                                                          .mobile-nav {
+                                                                                            display: -webkit-flex;
+                                                                                            display: -ms-flexbox;
+                                                                                            display: flex; }
+                                                                                            nav {
+                                                                                              display: none; } }
+                                                                                              .home {
+                                                                                                height: 100%;
+                                                                                                background: url("../assets/icon-green.png");
+                                                                                                background-repeat: no-repeat;
+                                                                                                background-size: 85%;
+                                                                                                background-position-x: 222%;
+                                                                                                background-position-y: -8%; }
+                                                                                                .home h1 .colored-header {
+                                                                                                  color: #3cb90f;
+                                                                                                  font-family: "Century Gothic", sans-serif;
+                                                                                                  font-size: 5rem;
+                                                                                                  font-weight: 100;
+                                                                                                  margin-bottom: 1%;
+                                                                                                  text-transform: uppercase; }
+                                                                                                  .home h2 {
+                                                                                                    font-size: 3rem; }
+                                                                                                    .home h3 {
+                                                                                                      font-size: 1.4rem;
+                                                                                                      margin: 0;
+                                                                                                      padding: 0; }
+                                                                                                      .home .about-me {
+                                                                                                        width: 40%; }
+                                                                                                        .home p {
+                                                                                                          font-size: 1.8rem; }
+                                                                                                          @media (max-width: 850px) {
+                                                                                                            .home .about-me {
+                                                                                                              width: 50%; } }
+                                                                                                              @media (max-width: 615px) {
+                                                                                                                .home .about-me {
+                                                                                                                  width: 60%; } }
+                                                                                                                  @media (max-width: 440px) {
+                                                                                                                    .home .about-me {
+                                                                                                                      width: 90%; } }
+                                                                                                                      
+                                                                                                                      .work {
+                                                                                                                        height: 100%;
+                                                                                                                        background: url("../assets/icon-charcoal.png");
+                                                                                                                        background-repeat: no-repeat;
+                                                                                                                        background-size: 85%;
+                                                                                                                        background-position-x: 222%;
+                                                                                                                        background-position-y: -8%;
+                                                                                                                        padding-left: 0; }
+                                                                                                                        .work h2 {
+                                                                                                                          color: #4baac8;
+                                                                                                                          font-family: "Century Gothic", sans-serif;
+                                                                                                                          font-size: 1.7rem;
+                                                                                                                          text-align: left; }
+                                                                                                                          .work .portfolio-peices {
+                                                                                                                            display: -webkit-flex;
+                                                                                                                            display: -ms-flexbox;
+                                                                                                                            display: flex;
+                                                                                                                            -webkit-flex-direction: row;
+                                                                                                                            -ms-flex-direction: row;
+                                                                                                                            flex-direction: row;
+                                                                                                                            -webkit-align-items: center;
+                                                                                                                            -ms-flex-align: center;
+                                                                                                                            align-items: center;
+                                                                                                                            -webkit-justify-content: center;
+                                                                                                                            -ms-flex-pack: center;
+                                                                                                                            justify-content: center;
+                                                                                                                            height: 100%; }
+                                                                                                                            .work .peice-buttons {
+                                                                                                                              width: 0;
+                                                                                                                              height: 0;
+                                                                                                                              display: none; }
+                                                                                                                              .work .peice-buttons button {
+                                                                                                                                width: 0;
+                                                                                                                                height: 0;
+                                                                                                                                display: none;
+                                                                                                                                color: white; }
+                                                                                                                                .work .peice-buttons .selected {
+                                                                                                                                  color: #4baac8; }
+                                                                                                                                  .work .peice-1,
+                                                                                                                                  .work .peice-2,
+                                                                                                                                  .work .peice-3 {
+                                                                                                                                    display: -webkit-flex;
+                                                                                                                                    display: -ms-flexbox;
+                                                                                                                                    display: flex;
+                                                                                                                                    -webkit-flex-direction: column;
+                                                                                                                                    -ms-flex-direction: column;
+                                                                                                                                    flex-direction: column;
+                                                                                                                                    width: 270px;
+                                                                                                                                    margin: 0 1% 5%;
+                                                                                                                                    height: 440px; }
+                                                                                                                                    .work .peice-1 p,
+                                                                                                                                    .work .peice-2 p,
+                                                                                                                                    .work .peice-3 p {
+                                                                                                                                      font-size: 1.5rem; }
+                                                                                                                                      .work .peice-1 .buttons,
+                                                                                                                                      .work .peice-2 .buttons,
+                                                                                                                                      .work .peice-3 .buttons {
+                                                                                                                                        display: -webkit-flex;
+                                                                                                                                        display: -ms-flexbox;
+                                                                                                                                        display: flex;
+                                                                                                                                        -webkit-flex-direction: row;
+                                                                                                                                        -ms-flex-direction: row;
+                                                                                                                                        flex-direction: row; }
+                                                                                                                                        .work .peice-1 button,
+                                                                                                                                        .work .peice-2 button,
+                                                                                                                                        .work .peice-3 button {
+                                                                                                                                          display: -webkit-flex;
+                                                                                                                                          display: -ms-flexbox;
+                                                                                                                                          display: flex;
+                                                                                                                                          -webkit-align-items: center;
+                                                                                                                                          -ms-flex-align: center;
+                                                                                                                                          align-items: center;
+                                                                                                                                          -webkit-flex-direction: row;
+                                                                                                                                          -ms-flex-direction: row;
+                                                                                                                                          flex-direction: row;
+                                                                                                                                          background: rgba(55, 55, 55, 0.9);
+                                                                                                                                          border: none;
+                                                                                                                                          border-radius: 5px;
+                                                                                                                                          color: #4baac8;
+                                                                                                                                          cursor: pointer;
+                                                                                                                                          height: 4rem;
+                                                                                                                                          -webkit-justify-content: center;
+                                                                                                                                          -ms-flex-pack: center;
+                                                                                                                                          justify-content: center;
+                                                                                                                                          margin-top: 20px;
+                                                                                                                                          transition: 0.5s all linear;
+                                                                                                                                          width: 11rem; }
+                                                                                                                                          .work .peice-1 button:hover,
+                                                                                                                                          .work .peice-2 button:hover,
+                                                                                                                                          .work .peice-3 button:hover {
+                                                                                                                                            background: rgba(40, 40, 40, 0.9);
+                                                                                                                                            color: #2e7f98; }
+                                                                                                                                            .work .peice-1 h4,
+                                                                                                                                            .work .peice-2 h4,
+                                                                                                                                            .work .peice-3 h4 {
+                                                                                                                                              margin: 0; }
+                                                                                                                                              .work .peice-1 .source-code,
+                                                                                                                                              .work .peice-2 .source-code,
+                                                                                                                                              .work .peice-3 .source-code {
+                                                                                                                                                margin-left: 5%; }
+                                                                                                                                                .work .peice-1 .live-site,
+                                                                                                                                                .work .peice-2 .live-site,
+                                                                                                                                                .work .peice-3 .live-site {
+                                                                                                                                                  margin-left: 5px;
+                                                                                                                                                  width: 7rem; }
+                                                                                                                                                  .work .peice-1 i,
+                                                                                                                                                  .work .peice-2 i,
+                                                                                                                                                  .work .peice-3 i {
+                                                                                                                                                    font-size: 2.5rem; }
+                                                                                                                                                    .work .peice-1 a,
+                                                                                                                                                    .work .peice-2 a,
+                                                                                                                                                    .work .peice-3 a {
+                                                                                                                                                      text-decoration: none; }
+                                                                                                                                                      .work .peice-1 .peice-img {
+                                                                                                                                                        background: url("../assets/pic1a.png"); }
+                                                                                                                                                        .work .peice-2 .peice-img {
+                                                                                                                                                          background: url("../assets/pic2a.png"); }
+                                                                                                                                                          .work .peice-3 .peice-img {
+                                                                                                                                                            background: url("../assets/pic3a.png"); }
+                                                                                                                                                            .work .peice-1 .peice-img,
+                                                                                                                                                            .work .peice-2 .peice-img,
+                                                                                                                                                            .work .peice-3 .peice-img {
+                                                                                                                                                              width: 270px;
+                                                                                                                                                              height: 175px;
+                                                                                                                                                              background-position: center;
+                                                                                                                                                              background-repeat: no-repeat;
+                                                                                                                                                              background-size: cover; }
+                                                                                                                                                              @media (max-width: 940px) {
+                                                                                                                                                                .work .portfolio-peices {
+                                                                                                                                                                  -webkit-align-items: center;
+                                                                                                                                                                  -ms-flex-align: center;
+                                                                                                                                                                  align-items: center; }
+                                                                                                                                                                  .work .hidden {
+                                                                                                                                                                    display: none;
+                                                                                                                                                                    height: 0;
+                                                                                                                                                                    width: 0; }
+                                                                                                                                                                    .work .displayed-peice {
+                                                                                                                                                                      width: 70%;
+                                                                                                                                                                      margin: 0;
+                                                                                                                                                                      display: -webkit-flex;
+                                                                                                                                                                      display: -ms-flexbox;
+                                                                                                                                                                      display: flex;
+                                                                                                                                                                      -webkit-justify-content: center;
+                                                                                                                                                                      -ms-flex-pack: center;
+                                                                                                                                                                      justify-content: center;
+                                                                                                                                                                      -webkit-align-items: flex-start;
+                                                                                                                                                                      -ms-flex-align: start;
+                                                                                                                                                                      align-items: flex-start;
+                                                                                                                                                                      padding-left: 15%; }
+                                                                                                                                                                      .work .peice-content {
+                                                                                                                                                                        width: 270px; }
+                                                                                                                                                                        .work .peice-buttons {
+                                                                                                                                                                          width: 25%;
+                                                                                                                                                                          height: auto;
+                                                                                                                                                                          display: -webkit-flex;
+                                                                                                                                                                          display: -ms-flexbox;
+                                                                                                                                                                          display: flex;
+                                                                                                                                                                          -webkit-flex-direction: column;
+                                                                                                                                                                          -ms-flex-direction: column;
+                                                                                                                                                                          flex-direction: column; }
+                                                                                                                                                                          .work .peice-buttons button {
+                                                                                                                                                                            width: 100%;
+                                                                                                                                                                            height: auto;
+                                                                                                                                                                            display: block;
+                                                                                                                                                                            background: none;
+                                                                                                                                                                            border: none; }
+                                                                                                                                                                            
+                                                                                                                                                                            .work .peice-buttons button:hover,
+                                                                                                                                                                            .work .peice-buttons button:focus,
+                                                                                                                                                                            .work .peice-buttons button:active {
+                                                                                                                                                                              cursor: pointer;
+                                                                                                                                                                              outline-color: transparent;
+                                                                                                                                                                              box-shadow: none; }
+                                                                                                                                                                              
+                                                                                                                                                                              .work .peice-buttons h4 {
+                                                                                                                                                                                font-size: 1.6rem;
+                                                                                                                                                                                margin: 3% 0; } }
+                                                                                                                                                                                @media (max-width: 500px) {
+                                                                                                                                                                                  .work .portfolio-peices {
+                                                                                                                                                                                    
+                                                                                                                                                                                    
+                                                                                                                                                                                    -webkit-align-items: center;
+                                                                                                                                                                                    -ms-flex-align: center;
+                                                                                                                                                                                    align-items: center;
+                                                                                                                                                                                    -webkit-flex-direction: column;
+                                                                                                                                                                                    -ms-flex-direction: column;
+                                                                                                                                                                                    flex-direction: column;
+                                                                                                                                                                                    margin-left: 1%; }
+                                                                                                                                                                                    .work .peice-1,
+                                                                                                                                                                                    .work .peice-2,
+                                                                                                                                                                                    .work .peice-3 {
+                                                                                                                                                                                      padding: 0;
+                                                                                                                                                                                      margin-top: 2%; }
+                                                                                                                                                                                      .work .peice-buttons {
+                                                                                                                                                                                        width: 90%;
+                                                                                                                                                                                        -webkit-flex-direction: row;
+                                                                                                                                                                                        -ms-flex-direction: row;
+                                                                                                                                                                                        flex-direction: row; } }
+                                                                                                                                                                                        
+                                                                                                                                                                                        .contact {
+                                                                                                                                                                                          background: url("../assets/icon-orange.png");
+                                                                                                                                                                                          background-repeat: no-repeat;
+                                                                                                                                                                                          background-size: 85%;
+                                                                                                                                                                                          background-position-x: 222%;
+                                                                                                                                                                                          background-position-y: -8%;
+                                                                                                                                                                                          display: -webkit-flex;
+                                                                                                                                                                                          display: -ms-flexbox;
+                                                                                                                                                                                          display: flex;
+                                                                                                                                                                                          -webkit-flex-direction: row;
+                                                                                                                                                                                          -ms-flex-direction: row;
+                                                                                                                                                                                          flex-direction: row;
+                                                                                                                                                                                          -webkit-flex-wrap: wrap;
+                                                                                                                                                                                          -ms-flex-wrap: wrap;
+                                                                                                                                                                                          flex-wrap: wrap;
+                                                                                                                                                                                          padding-left: 0; }
+                                                                                                                                                                                          .contact h2 {
+                                                                                                                                                                                            font-size: 3rem;
+                                                                                                                                                                                            height: 3.2rem;
+                                                                                                                                                                                            margin: 0;
+                                                                                                                                                                                            text-align: center;
+                                                                                                                                                                                            width: 100%; }
+                                                                                                                                                                                            .contact form {
+                                                                                                                                                                                              display: -webkit-flex;
+                                                                                                                                                                                              display: -ms-flexbox;
+                                                                                                                                                                                              display: flex;
+                                                                                                                                                                                              -webkit-flex-direction: column;
+                                                                                                                                                                                              -ms-flex-direction: column;
+                                                                                                                                                                                              flex-direction: column;
+                                                                                                                                                                                              -webkit-justify-content: center;
+                                                                                                                                                                                              -ms-flex-pack: center;
+                                                                                                                                                                                              justify-content: center;
+                                                                                                                                                                                              -webkit-align-items: center;
+                                                                                                                                                                                              -ms-flex-align: center;
+                                                                                                                                                                                              align-items: center;
+                                                                                                                                                                                              width: 60%; }
+                                                                                                                                                                                              .contact label {
+                                                                                                                                                                                                -webkit-align-self: flex-start;
+                                                                                                                                                                                                -ms-flex-item-align: start;
+                                                                                                                                                                                                align-self: flex-start;
+                                                                                                                                                                                                font-size: 2rem;
+                                                                                                                                                                                                margin: 2% 0 1%;
+                                                                                                                                                                                                
+                                                                                                                                                                                                padding-left: 30%;
+                                                                                                                                                                                                white-space: pre; }
+                                                                                                                                                                                                
+                                                                                                                                                                                                .contact input,
+                                                                                                                                                                                                .contact textarea {
+                                                                                                                                                                                                  background: rgba(190, 190, 190, 0.8);
+                                                                                                                                                                                                  border: none;
+                                                                                                                                                                                                  border-radius: 5px;
+                                                                                                                                                                                                  font-size: 1.5rem;
+                                                                                                                                                                                                  height: 3rem;
+                                                                                                                                                                                                  padding-left: 10px;
+                                                                                                                                                                                                  width: 40%;
+                                                                                                                                                                                                  min-width: 200px; }
+                                                                                                                                                                                                  .contact input:focus,
+                                                                                                                                                                                                  .contact textarea:focus {
+                                                                                                                                                                                                    outline-color: #e1690a;
+                                                                                                                                                                                                    box-shadow: #e1690a; }
+                                                                                                                                                                                                    .contact textarea {
+                                                                                                                                                                                                      height: 175px;
+                                                                                                                                                                                                      padding-top: 10px; }
+                                                                                                                                                                                                      .contact .name {
+                                                                                                                                                                                                        padding-top: 0; }
+                                                                                                                                                                                                        .contact .submit {
+                                                                                                                                                                                                          background: rgba(30, 30, 30, 0.9);
+                                                                                                                                                                                                          border: none;
+                                                                                                                                                                                                          border-radius: 5px;
+                                                                                                                                                                                                          color: #e1690a;
+                                                                                                                                                                                                          cursor: pointer;
+                                                                                                                                                                                                          height: 4rem;
+                                                                                                                                                                                                          margin-top: 20px;
+                                                                                                                                                                                                          width: 12rem;
+                                                                                                                                                                                                          transition: 0.5s all; }
+                                                                                                                                                                                                          .contact .submit:hover {
+                                                                                                                                                                                                            background: rgba(20, 20, 20, 0.9);
+                                                                                                                                                                                                            color: #f79141; }
+                                                                                                                                                                                                            .contact ::-webkit-input-placeholder {
+                                                                                                                                                                                                              color: rgba(40, 40, 40, 0.9); }
+                                                                                                                                                                                                              .contact .contact-info {
+                                                                                                                                                                                                                display: -webkit-flex;
+                                                                                                                                                                                                                display: -ms-flexbox;
+                                                                                                                                                                                                                display: flex;
+                                                                                                                                                                                                                -webkit-align-items: flex-start;
+                                                                                                                                                                                                                -ms-flex-align: start;
+                                                                                                                                                                                                                align-items: flex-start;
+                                                                                                                                                                                                                -webkit-flex-direction: column;
+                                                                                                                                                                                                                -ms-flex-direction: column;
+                                                                                                                                                                                                                flex-direction: column;
+                                                                                                                                                                                                                -webkit-justify-content: center;
+                                                                                                                                                                                                                -ms-flex-pack: center;
+                                                                                                                                                                                                                justify-content: center;
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                width: 30%;
+                                                                                                                                                                                                                min-width: 280px; }
+                                                                                                                                                                                                                .contact span {
+                                                                                                                                                                                                                  color: #e1690a;
+                                                                                                                                                                                                                  font-weight: 600;
+                                                                                                                                                                                                                  font-size: 2.2rem; }
+                                                                                                                                                                                                                  .contact .social {
+                                                                                                                                                                                                                    display: -webkit-flex;
+                                                                                                                                                                                                                    display: -ms-flexbox;
+                                                                                                                                                                                                                    display: flex;
+                                                                                                                                                                                                                    -webkit-flex-direction: row;
+                                                                                                                                                                                                                    -ms-flex-direction: row;
+                                                                                                                                                                                                                    flex-direction: row;
+                                                                                                                                                                                                                    -webkit-justify-content: flex-start;
+                                                                                                                                                                                                                    -ms-flex-pack: start;
+                                                                                                                                                                                                                    justify-content: flex-start;
+                                                                                                                                                                                                                    width: 100%; }
+                                                                                                                                                                                                                    .contact a,
+                                                                                                                                                                                                                    .contact i,
+                                                                                                                                                                                                                    .contact
+                                                                                                                                                                                                                    p {
+                                                                                                                                                                                                                      color: white;
+                                                                                                                                                                                                                      font-size: 2rem;
+                                                                                                                                                                                                                      margin: 0.5px;
+                                                                                                                                                                                                                      text-align: center; }
+                                                                                                                                                                                                                      .contact a {
+                                                                                                                                                                                                                        margin: 8px 16px;
+                                                                                                                                                                                                                        border: 1px white solid;
+                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                        width: 40px;
+                                                                                                                                                                                                                        height: 40px;
+                                                                                                                                                                                                                        padding-top: 4.5px;
+                                                                                                                                                                                                                        transition: all 1s; }
+                                                                                                                                                                                                                        .contact a:hover {
+                                                                                                                                                                                                                          color: #e1690a;
+                                                                                                                                                                                                                          border: #e1690a 1px solid; }
+                                                                                                                                                                                                                          .contact a:hover .fa {
+                                                                                                                                                                                                                            color: #e1690a; }
+                                                                                                                                                                                                                            .contact a:nth-child(0n+1) {
+                                                                                                                                                                                                                              margin-left: 0; }
+                                                                                                                                                                                                                              @media (max-width: 880px) {
+                                                                                                                                                                                                                                .contact form,
+                                                                                                                                                                                                                                .contact .contact-info {
+                                                                                                                                                                                                                                  width: 100%; }
+                                                                                                                                                                                                                                  .contact .contact-info,
+                                                                                                                                                                                                                                  .contact .social {
+                                                                                                                                                                                                                                    -webkit-align-items: center;
+                                                                                                                                                                                                                                    -ms-flex-align: center;
+                                                                                                                                                                                                                                    align-items: center;
+                                                                                                                                                                                                                                    -webkit-justify-content: center;
+                                                                                                                                                                                                                                    -ms-flex-pack: center;
+                                                                                                                                                                                                                                    justify-content: center; } }
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                    .about {
+                                                                                                                                                                                                                                      display: -webkit-flex;
+                                                                                                                                                                                                                                      display: -ms-flexbox;
+                                                                                                                                                                                                                                      display: flex;
+                                                                                                                                                                                                                                      -webkit-justify-content: center;
+                                                                                                                                                                                                                                      -ms-flex-pack: center;
+                                                                                                                                                                                                                                      justify-content: center;
+                                                                                                                                                                                                                                      -webkit-align-items: center;
+                                                                                                                                                                                                                                      -ms-flex-align: center;
+                                                                                                                                                                                                                                      align-items: center;
+                                                                                                                                                                                                                                      -webkit-flex-direction: column;
+                                                                                                                                                                                                                                      -ms-flex-direction: column;
+                                                                                                                                                                                                                                      flex-direction: column;
+                                                                                                                                                                                                                                      padding: 0;
+                                                                                                                                                                                                                                      margin: 0; }
+                                                                                                                                                                                                                                      .about p {
+                                                                                                                                                                                                                                        font-size: 1.4rem;
+                                                                                                                                                                                                                                        width: 60%; }
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                        html,
+                                                                                                                                                                                                                                        body {
+                                                                                                                                                                                                                                          margin: 0;
+                                                                                                                                                                                                                                          height: 100%;
+                                                                                                                                                                                                                                          width: 100%;
+                                                                                                                                                                                                                                          background: gray; }
+                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                          section {
+                                                                                                                                                                                                                                            height: 94%;
+                                                                                                                                                                                                                                            margin-top: 5%;
+                                                                                                                                                                                                                                            padding-left: 5%;
+                                                                                                                                                                                                                                            width: 100%; }
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                            h1 {
+                                                                                                                                                                                                                                              font-family: "Century Gothic", sans-serif;
+                                                                                                                                                                                                                                              font-size: 5rem;
+                                                                                                                                                                                                                                              font-weight: 100;
+                                                                                                                                                                                                                                              margin-bottom: 0;
+                                                                                                                                                                                                                                              text-transform: uppercase; }
+                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                              .container {
+                                                                                                                                                                                                                                                height: 100%;
+                                                                                                                                                                                                                                                margin: 0;
+                                                                                                                                                                                                                                                padding: 0;
+                                                                                                                                                                                                                                                -webkit-perspective: 200vw;
+                                                                                                                                                                                                                                                perspective: 200vw;
+                                                                                                                                                                                                                                                position: relative;
+                                                                                                                                                                                                                                                width: 98vw; }
