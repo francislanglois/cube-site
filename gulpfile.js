@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var watch = require('gulp-watch');
+var autoprefixer = require('gulp-autoprefixer');
 
 //Setup gulp task, you can name it anything
 //We call it styles
@@ -34,3 +35,12 @@ gulp.task('jshint', function (){
 });
 
 gulp.task('default',['watch']);
+
+gulp.task('autoprefixer', function () {
+  return gulp.src('styles/style.css')
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(gulp.dest('dist'));
+});

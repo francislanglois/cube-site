@@ -160,6 +160,15 @@
         background: none;
         border:none;
       }
+      
+      button:hover,
+      button:focus,
+      button:active{
+        cursor: pointer;
+        outline-color: transparent;
+        box-shadow: none;
+      }
+      
       h4{
         font-size: 1.6rem;
         margin:3% 0;
@@ -169,7 +178,7 @@
   
   @media(max-width:500px){
     .portfolio-peices{
-      align-items: flex-start;
+      align-items: center;
       flex-direction: column;
       margin-left:1%;
     }
