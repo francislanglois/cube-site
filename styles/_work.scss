@@ -19,32 +19,22 @@
     align-items: center;
     justify-content: center;
     height:100%;
+  }
+  
+  .peice-buttons{
+    width:0;
+    height:0;
+    display: none;
     
-    @media(max-width: 940px){
-      flex-direction: column;
-      .peice-img{
-        width:0;
-        height:0;
-      }
-      .peice-1{
-        background: linear-gradient(rgba(60, 60, 60, 0.65), rgba(60, 60, 60, 0.65)), url("../assets/pic1.png");
-      }
-      
-      .peice-2{
-        background: linear-gradient(rgba(60, 60, 60, 0.65), rgba(60, 60, 60, 0.65)), url("../assets/pic2.png");
-      }
-      
-      .peice-3{
-        background: linear-gradient(rgba(60, 60, 60, 0.65), rgba(60, 60, 60, 0.65)), url("../assets/pic3.png");
-      }
-      
-      .peice-1,
-      .peice-2,
-      .peice-3{
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
+    button{
+      width:0;
+      height:0;
+      display: none;
+      color:white;
+    }
+    
+    .selected{
+      color:$blue;
     }
   }
   
@@ -90,16 +80,20 @@
     h4{
       margin:0;
     }
-    .live-site,
+    
     .source-code{
       margin-left:5%;
     }
+    
     .live-site{
+      margin-left:5px;
       width:7rem;
     }
+    
     i{
       font-size:2.5rem;
     }
+    
     a{
       text-decoration: none;
     }
@@ -125,5 +119,51 @@
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  
+  
+  @media(max-width: 940px){
+    
+    .portfolio-peices{
+      align-items: center;
+    }
+    
+    .hidden{
+      display: none;
+      height:0;
+      width:0;
+    }
+    
+    .displayed-peice{
+      width:70%;
+      margin:0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left:15%;
+    }
+    
+    .peice-content{
+      width:270px;
+    }
+    
+    .peice-buttons{
+      width:25%;
+      height:auto;
+      display: flex;
+      flex-direction: column;
+      
+      button{
+        width:100%;
+        height:auto;
+        display:block;
+        background: none;
+        border:none;
+      }
+      h4{
+        font-size: 1.6rem;
+        margin:3% 0;
+      }
+    }
   }
 }

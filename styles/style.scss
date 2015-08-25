@@ -12,6 +12,13 @@ $green: rgba(60, 185, 15, 1);
 $orange: rgba(225, 105, 10, 1);
 $purple: rgba(200, 160, 220, 1);
 
+//Extends
+.hidden{
+  display: none;
+  height: 0;
+  width:0;
+}
+
 
 @import 'cube';
 @import 'pyramid';
