@@ -11,15 +11,33 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+  <div class="mobile-nav">
+    <div class="menu-btn">
+      <div></div>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="responsive-menu">
+      <button class="show-front">Home</button>
+      <button class="show-right">My Work</button>
+      <button class="show-left">Contact</button>
+      <button class="show-back">About Me</button>
+      <!-- <button class="show-top">Top</button>
+      <button class="show-bottom">Bottom</button> -->
+    </nav>
+  </div>
+  
   <nav>
     <button class="show-front" data-hover="HOME">Home</button>
     <button class="show-right" data-hover="MY WORK">My Work</button>
     <button class="show-left" data-hover="CONTACT">Contact</button>
     <button class="show-back" data-hover="ABOUT ME">About Me</button>
-    
     <!-- <button class="show-top">Top</button>
     <button class="show-bottom">Bottom</button> -->
   </nav>
+  <div id="contentLayer"></div>
+  
   <div class="container">
     
     <div id="cube">
@@ -49,7 +67,9 @@
               <button class="peice-3-button"><h4>PSD Conversion</h4></button>
             </div>
             <div class="peice-1">
-              <div class="peice-img"></div>
+              <a href="http://www.hackerpets.com" target="_blank">
+                <div class="peice-img"></div>
+              </a>
               <div class="peice-content">
                 <h2>Responsive Gallery</h2>
                 <p>Here we created our own responsive gallery. We created an interactive modal using a bit of Javascript to showcase our furry friends and their owners.</p>
@@ -69,7 +89,9 @@
               </div>
             </div> <!-- .peice-1 -->
             <div class="peice-2">
-              <div class="peice-img"></div>
+              <a href="http://koala-coders.github.io/foursquare-wifi/" target="_blank">
+                <div class="peice-img"></div>
+              </a>
               <div class="peice-content">
                 <h2>API Challenge</h2>
                 <p>We were challenged to use the data from an API to populate a map of the free WiFi in a geographic area. Working as a team we came up with a solution using the Foursquare API and designed a mobile first web app!</p>
@@ -80,9 +102,11 @@
                       <h4 class="source-code">Source Code</h4>
                     </button>
                   </a>
-                  <button class="live-site">
-                    <h4>Live Site</h4>
-                  </button>
+                  <a href="http://koala-coders.github.io/foursquare-wifi/" target="_blank">
+                    <button class="live-site">
+                      <h4>Live Site</h4>
+                    </button>
+                  </a>
                 </div><!-- .buttons -->
               </div>
             </div> <!-- .peice-2 -->

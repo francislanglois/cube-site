@@ -53,3 +53,72 @@ nav{
     box-shadow: none;
   }
 }
+
+.mobile-nav{
+  display:none;
+  left:30px;
+  position: absolute;
+  top:10px;
+  z-index: 1;
+}
+
+.menu-btn div{
+  font-size:1.8rem;
+  font-weight:200;
+  left:100%;
+  line-height: 1.2;
+  margin-top:-0.5rem;
+  padding-right:8px;
+  position: absolute;
+  top:64%;
+  z-index: 99;
+}
+
+.menu-btn span{
+  display: block;
+  width:19px;
+  height:3px;
+  margin:4px 0;
+  background: rgb(240,240,240);
+  z-index: 99;
+}
+
+.expand{
+  display:flex;
+  left:20px;
+}
+
+.responsive-menu{
+  background: rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  width:150px;
+  
+  button{
+    width: 90px;
+  }
+  
+  button:hover,
+  button:focus,
+  button:active{
+    color:white;
+    border:none;
+  }
+  button:hover::before,
+  button:active::before{
+    max-width: 0;
+    border:none;
+    outline-color: none;
+    box-shadow: none;
+  }
+}
+
+
+@media(max-width:500px){
+  .mobile-nav{
+    display:flex;
+  }
+  
+  nav{
+    display:none
+  }
+}

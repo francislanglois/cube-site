@@ -4,6 +4,10 @@ $('nav button').on('click', function(){
   //remove any class from the cube and adds the class that was in the variable currentSide
   $('#cube').removeClass().addClass(currentSide);
   
+  if($('.responsive-menu').hasClass('expand')){
+    $('.responsive-menu').removeClass('expand');
+  }
+  
   //Changes the color of the nav bar to match the theme when the cube is rotated
   if($(this).attr('class') === 'show-right'){
     $('nav button').css('color', 'rgba(75, 170, 200, 1)');
@@ -74,4 +78,10 @@ $(document).ready(function(){
   $(window).resize(function(){
     checkWidth(false);
   });
+  
+  $(function(){
+    $('.menu-btn').click(function(){
+      $('.responsive-menu').toggleClass('expand')
+    })
+  })
 });
