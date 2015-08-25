@@ -42,7 +42,7 @@ nav{
   button:active::before{
     max-width: 100%;
     border:1px white solid;
-    outline-color: none;
+    outline-color: transparent;
     box-shadow: none;
   }
   button:hover,
