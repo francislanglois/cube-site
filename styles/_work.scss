@@ -166,4 +166,24 @@
       }
     }
   }
+  
+  @media(max-width:500px){
+    .portfolio-peices{
+      align-items: flex-start;
+      flex-direction: column;
+      margin-left:1%;
+    }
+    
+    .peice-1,
+    .peice-2,
+    .peice-3{
+      padding:0;
+      margin-top:2%;
+    }
+    
+    .peice-buttons{
+      width:90%;
+      flex-direction: row;
+    }
+  }
 }
