@@ -39,7 +39,7 @@ $('nav button').on('click', function(){
     yAngle = 90;
   }
   else {
-    $('nav button').css('color', 'rgba(200, 160, 220, 1)');
+    $('nav button').css('color', 'rgba(215, 20, 75, 1)');
     document.getElementById('cube').style[prop] = 'translateZ(-50vw) rotateY(180deg)';
     yAngle = 180;
   }
