@@ -3,8 +3,8 @@
   background: url("../assets/icon-green.png");
   background-repeat: no-repeat;
   background-size:85%;
-  background-position-x:222%;
-  background-position-y:-8%;
+  background-position-x:215%;
+  background-position-y:10%;
   
   h1 .colored-header{
     color: $green;
@@ -24,7 +24,7 @@
     margin:0;
     padding:0;
   }
-  .about-me{
+  .short-bio{
     width:40%;
   }
   p{
@@ -32,18 +32,18 @@
   }
   
   @media(max-width:850px){
-    .about-me{
+    .short-bio{
       width:50%;
     }
   }
   @media(max-width:615px){
-    .about-me{
+    .short-bio{
       width:60%;
     }
   }
   
   @media(max-width: 440px){
-    .about-me{
+    .short-bio{
       width:90%;
     }
   }

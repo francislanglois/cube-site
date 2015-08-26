@@ -623,8 +623,8 @@ nav {
   background: url("../assets/icon-green.png");
   background-repeat: no-repeat;
   background-size: 85%;
-  background-position-x: 222%;
-  background-position-y: -8%; }
+  background-position-x: 215%;
+  background-position-y: 10%; }
   .home h1 .colored-header {
     color: #3cb90f;
     font-family: "Century Gothic", sans-serif;
@@ -638,18 +638,18 @@ nav {
     font-size: 1.4rem;
     margin: 0;
     padding: 0; }
-  .home .about-me {
+  .home .short-bio {
     width: 40%; }
   .home p {
     font-size: 1.8rem; }
   @media (max-width: 850px) {
-    .home .about-me {
+    .home .short-bio {
       width: 50%; } }
   @media (max-width: 615px) {
-    .home .about-me {
+    .home .short-bio {
       width: 60%; } }
   @media (max-width: 440px) {
-    .home .about-me {
+    .home .short-bio {
       width: 90%; } }
 
 .work {
@@ -657,8 +657,8 @@ nav {
   background: url("../assets/icon-charcoal.png");
   background-repeat: no-repeat;
   background-size: 85%;
-  background-position-x: 222%;
-  background-position-y: -8%;
+  background-position-x: 215%;
+  background-position-y: 10%;
   padding-left: 0; }
   .work h2 {
     color: #4baac8;
@@ -714,7 +714,9 @@ nav {
       display: flex;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+      position: absolute;
+      bottom: 105px; }
     .work .peice-1 button,
     .work .peice-2 button,
     .work .peice-3 button {
@@ -765,20 +767,58 @@ nav {
     .work .peice-2 a,
     .work .peice-3 a {
       text-decoration: none; }
-  .work .peice-1 .peice-img {
-    background: url("../assets/pic1a.png"); }
-  .work .peice-2 .peice-img {
-    background: url("../assets/pic2a.png"); }
-  .work .peice-3 .peice-img {
-    background: url("../assets/pic3a.png"); }
-  .work .peice-1 .peice-img,
-  .work .peice-2 .peice-img,
-  .work .peice-3 .peice-img {
-    width: 270px;
+  .work .peice-img {
     height: 175px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+    overflow: hidden; }
+  .work .peice-1 .peice-img img,
+  .work .peice-2 .peice-img img,
+  .work .peice-3 .peice-img img {
+    display: block;
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    width: 270px;
+    transition: all 0.3s ease-in-out; }
+  .work .mask {
+    background: rgba(40, 40, 40, 0.6);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 175px;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    top: -175px;
+    width: 270px;
+    transition: all 0.3s ease-in-out; }
+  .work .mask h4 {
+    color: #4baac8;
+    font-size: 3.5rem; }
+  .work .mask h5 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0; }
+  .work .peice-1 .peice-img:hover img,
+  .work .peice-2 .peice-img:hover img,
+  .work .peice-3 .peice-img:hover img {
+    -webkit-transform: translateX(270px);
+    transform: translateX(270px); }
+  .work .peice-1 .peice-img:hover .mask,
+  .work .peice-2 .peice-img:hover .mask,
+  .work .peice-3 .peice-img:hover .mask {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1; }
   @media (max-width: 940px) {
     .work .portfolio-peices {
       -webkit-align-items: center;
@@ -794,9 +834,9 @@ nav {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
       align-items: flex-start;
@@ -851,8 +891,8 @@ nav {
   background: url("../assets/icon-orange.png");
   background-repeat: no-repeat;
   background-size: 85%;
-  background-position-x: 222%;
-  background-position-y: -8%;
+  background-position-x: 215%;
+  background-position-y: 10%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;

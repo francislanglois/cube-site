@@ -3,8 +3,8 @@
   background: url("../assets/icon-charcoal.png");
   background-repeat: no-repeat;
   background-size:85%;
-  background-position-x:222%;
-  background-position-y:-8%;
+  background-position-x:215%;
+  background-position-y:10%;
   padding-left:0;
   
   h2{
@@ -54,6 +54,8 @@
     .buttons{
       display: flex;
       flex-direction: row;
+      position: absolute;
+      bottom:105px;
     }
     
     button{
@@ -99,28 +101,61 @@
     }
   }
   
-  .peice-1 .peice-img{
-    background: url("../assets/pic1a.png");
-  }
-  
-  .peice-2 .peice-img{
-    background: url("../assets/pic2a.png");
-  }
-  
-  .peice-3 .peice-img{
-    background: url("../assets/pic3a.png");
-  }
-  
-  .peice-1 .peice-img,
-  .peice-2 .peice-img,
-  .peice-3 .peice-img{
-    width:270px;
+  .peice-img{
     height:175px;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
   }
   
+  .peice-1 .peice-img img,
+  .peice-2 .peice-img img,
+  .peice-3 .peice-img img{
+    display:block;
+    height:175px;
+    overflow:hidden;
+    position:relative;
+    width:270px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mask{
+    background: rgba(40, 40, 40, 0.6);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height:175px;
+    left:0;
+    opacity: 0;
+    overflow:hidden;
+    position:relative;
+    top:-175px;
+    width:270px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mask h4{
+    color:$blue;
+    font-size:3.5rem;
+  }
+  
+  .mask h5{
+    color:white;
+    font-size:2.5rem;
+    margin:0;
+  }
+  
+  .peice-1 .peice-img:hover img,
+  .peice-2 .peice-img:hover img,
+  .peice-3 .peice-img:hover img{
+    transform:translateX(270px);
+  }
+  
+  .peice-1 .peice-img:hover .mask,
+  .peice-2 .peice-img:hover .mask,
+  .peice-3 .peice-img:hover .mask{
+    transform: translateX(0px);
+    opacity:1;
+  }
   
   @media(max-width: 940px){
     
@@ -138,7 +173,7 @@
       width:70%;
       margin:0;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
       padding-left:15%;
     }
