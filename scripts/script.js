@@ -69,7 +69,7 @@ $('body').keydown(function(e){
     $('nav button').css('color', 'rgba(75, 170, 200, 1)');
   }
   else if (yAngle === 180 || yAngle === -180) {
-    $('nav button').css('color', 'rgba(200, 160, 220, 1)');
+    $('nav button').css('color', 'rgba(215, 20, 75, 1)');
   }
   else if (yAngle === 90 || yAngle === -270){
     $('nav button').css('color', 'rgba(225, 105, 10, 1)');

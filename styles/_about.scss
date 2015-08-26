@@ -4,16 +4,19 @@
   align-items: flex-start;
   flex-direction: row;
   padding:0;
+  position:absolute;
   
   .about-content{
     width: 60%;
     margin-top:5%;
+    min-width:490px;
     padding-left:5%;
   }
   
   .skills{
     width:40%;
     margin-top:5%;
+    min-width:200px;
   }
   
   p{
@@ -23,13 +26,133 @@
   
   span{
     font-size: 1.6rem;
-    color:$purple;
     font-weight: 600;
     letter-spacing: 1px;
   }
   
+  h2{
+    font-size:2.5rem;
+  }
+  
   h3{
     font-size: 2rem;
+  }
+  
+  span,
+  h2,
+  h3{
     color:$purple;
+  }
+  
+  ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    width:70%;
+  }
+  
+  li{
+    font-size:1.5rem;
+    margin:3%;
+  }
+  
+  img{
+    height: 60px;
+    width: 60px;
+  }
+  
+  .gulp{
+    width:40px;
+  }
+  
+  button{
+    background: rgba(35, 35, 35, 1);
+    border: 0px none;
+    color: $purple;
+    font-size:2rem;
+    border-radius:5px;
+    padding:2%;
+    position: relative;
+    bottom:-80%;
+    right:5%;
+  }
+  
+  button:hover{
+    background: rgba(20, 20, 20, 1);
+  }
+  
+  .short-contact{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    
+    div{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      width:100%;
+    }
+    
+    img{
+      height:100px;
+      width:100px;
+      border-radius: 50%;
+      margin-right:5%;
+    }
+    
+    p{
+      margin:0;
+    }
+  }
+  
+  @media(max-width:750px){
+    p{
+      width:100%;
+    }
+    
+    .skills{
+      display:none;
+      width:0;
+      height:0;
+    }
+    
+    .about-content{
+      width:90%;
+      min-width:320px;
+      padding:0;
+      margin-left:15%;
+    }
+    
+    button{
+      bottom:-90%
+    }
+  }
+  
+  @media(max-width:500px){
+    .short-contact img{
+      display:none;
+    }
+    
+    button{
+      bottom:-93%;
+      right:15%;
+    }
+  }
+  
+  @media(max-width:380px){
+    .about-content{
+      min-width:280px;
+      margin:0;
+    }
+    
+    .short-contact,
+    button{
+      display:none;
+      width:0;
+      height:0;
+    }
   }
 }
