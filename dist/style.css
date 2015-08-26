@@ -716,7 +716,7 @@ nav {
       -ms-flex-direction: row;
       flex-direction: row;
       position: absolute;
-      bottom: 105px; }
+      bottom: 5%; }
     .work .peice-1 button,
     .work .peice-2 button,
     .work .peice-3 button {
@@ -820,6 +820,10 @@ nav {
     transform: translateX(0px);
     opacity: 1; }
   @media (max-width: 940px) {
+    .work .peice-1 .buttons,
+    .work .peice-2 .buttons,
+    .work .peice-3 .buttons {
+      position: initial; }
     .work .portfolio-peices {
       -webkit-align-items: center;
       -ms-flex-align: center;
