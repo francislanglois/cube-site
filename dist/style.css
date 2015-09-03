@@ -610,6 +610,26 @@ nav {
     outline-color: none;
     box-shadow: none; }
 
+.arrow-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100vw; }
+  .arrow-container button {
+    background: none;
+    border: 0;
+    padding: 0 2% 0 1%; }
+  .arrow-container .fa-chevron-left {
+    font-size: 3rem; }
+  .arrow-container .fa-chevron-right {
+    font-size: 3rem; }
+
 @media (max-width: 500px) {
   .mobile-nav {
     display: -webkit-flex;
@@ -1093,7 +1113,7 @@ p {
   .about img {
     height: 60px;
     width: 60px; }
-  .about button {
+  .about .resume-button {
     background: #232323;
     border: 0px none;
     color: #d7144b;
@@ -1103,7 +1123,7 @@ p {
     position: relative;
     bottom: -80%;
     right: 5%; }
-  .about button:hover {
+  .about .resume-button:hover {
     background: #141414; }
   .about .short-contact {
     display: -webkit-flex;
@@ -1146,12 +1166,12 @@ p {
       min-width: 320px;
       padding: 0;
       margin-left: 15%; }
-    .about button {
+    .about .resume-button {
       bottom: -90%; } }
   @media (max-width: 500px) {
     .about .short-contact img {
       display: none; }
-    .about button {
+    .about .resume-button {
       bottom: -93%;
       right: 15%; } }
   @media (max-width: 380px) {
@@ -1159,7 +1179,7 @@ p {
       min-width: 280px;
       margin: 0; }
     .about .short-contact,
-    .about button {
+    .about .resume-button {
       display: none;
       width: 0;
       height: 0; } }

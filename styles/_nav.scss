@@ -116,6 +116,30 @@ nav{
   }
 }
 
+.arrow-container{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left:0;
+  top:50%;
+  width:100vw;
+  
+  button{
+    background: none;
+    border:0;
+    padding: 0 2% 0 1%;
+  }
+  
+  
+  .fa-chevron-left{
+    font-size:3rem;
+  }
+  
+  .fa-chevron-right{
+    font-size:3rem;
+  }
+}
+
 
 @media(max-width:500px){
   .mobile-nav{
