@@ -3,19 +3,16 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
-  padding:0;
   position:absolute;
   
   .about-content{
     width: 60%;
-    margin-top:5%;
     min-width:490px;
     padding-left:5%;
   }
   
   .skills{
     width:40%;
-    margin-top:5%;
     min-width:200px;
   }
   
@@ -50,7 +47,7 @@
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
-    width:70%;
+    width:315px;
   }
   
   li{
@@ -104,7 +101,8 @@
     }
   }
   
-  @media(max-width:750px){
+  @media(max-width:830px){
+    padding-left:0;
     p{
       width:100%;
     }
@@ -133,7 +131,7 @@
     }
     
     .resume-button{
-      bottom:-93%;
+      bottom:-90%;
       right:15%;
     }
   }

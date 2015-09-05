@@ -629,6 +629,12 @@ nav {
     font-size: 3rem; }
   .arrow-container .fa-chevron-right {
     font-size: 3rem; }
+  .arrow-container .fa-chevron-right,
+  .arrow-container .fa-chevron-left {
+    padding: 10px; }
+
+.about .arrow-container {
+  top: 45%; }
 
 @media (max-width: 500px) {
   .mobile-nav {
@@ -639,12 +645,12 @@ nav {
     display: none; } }
 
 .home {
-  height: 100%;
   background: url("../assets/icon-green.png");
   background-repeat: no-repeat;
   background-size: 85%;
   background-position-x: 215%;
-  background-position-y: 10%; }
+  background-position-y: 10%;
+  padding-left: 10%; }
   .home h1 .colored-header {
     color: #3cb90f;
     font-family: "Century Gothic", sans-serif;
@@ -960,6 +966,7 @@ nav {
     background: rgba(190, 190, 190, 0.8);
     border: none;
     border-radius: 5px;
+    color: #282828;
     font-size: 1.5rem;
     height: 3rem;
     padding-left: 10px;
@@ -1068,16 +1075,13 @@ p {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 0;
   position: absolute; }
   .about .about-content {
     width: 60%;
-    margin-top: 5%;
     min-width: 490px;
     padding-left: 5%; }
   .about .skills {
     width: 40%;
-    margin-top: 5%;
     min-width: 200px; }
   .about p {
     font-size: 1.6rem;
@@ -1106,7 +1110,7 @@ p {
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
-    width: 70%; }
+    width: 315px; }
   .about li {
     font-size: 1.5rem;
     margin: 3%; }
@@ -1154,25 +1158,27 @@ p {
       margin-right: 5%; }
     .about .short-contact p {
       margin: 0; }
-  @media (max-width: 750px) {
-    .about p {
-      width: 100%; }
-    .about .skills {
-      display: none;
-      width: 0;
-      height: 0; }
-    .about .about-content {
-      width: 90%;
-      min-width: 320px;
-      padding: 0;
-      margin-left: 15%; }
-    .about .resume-button {
-      bottom: -90%; } }
+  @media (max-width: 830px) {
+    .about {
+      padding-left: 0; }
+      .about p {
+        width: 100%; }
+      .about .skills {
+        display: none;
+        width: 0;
+        height: 0; }
+      .about .about-content {
+        width: 90%;
+        min-width: 320px;
+        padding: 0;
+        margin-left: 15%; }
+      .about .resume-button {
+        bottom: -90%; } }
   @media (max-width: 500px) {
     .about .short-contact img {
       display: none; }
     .about .resume-button {
-      bottom: -93%;
+      bottom: -90%;
       right: 15%; } }
   @media (max-width: 380px) {
     .about .about-content {
@@ -1192,8 +1198,8 @@ body {
   background: gray; }
 
 section {
-  height: 94%;
-  margin-top: 5%;
+  height: 100%;
+  padding-top: 5%;
   padding-left: 5%;
   width: 100%; }
 

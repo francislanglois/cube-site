@@ -124,7 +124,7 @@ function checkWidth(init){
     if(!init){
       $('.peice-1').removeClass('displayed-peice').removeClass('hidden');
       $('.peice-2').removeClass('displayed-peice').removeClass('hidden');
-      $('.peice-3').removeClass('displayed-peice').removeClass('hidden');
+      $('.peice-3').removeClass('displayed-peice').removeClass('hidden'); 
     }
   }
 }
