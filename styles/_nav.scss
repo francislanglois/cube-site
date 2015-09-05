@@ -60,6 +60,13 @@ nav{
   position: absolute;
   top:10px;
   z-index: 1;
+  
+  .expand{
+    display:flex;
+    left:-25px;
+    top:45px;
+  }
+  
 }
 
 .menu-btn div{
@@ -83,19 +90,16 @@ nav{
   z-index: 99;
 }
 
-.expand{
-  display:flex;
-  left:-1px;
-}
-
 .responsive-menu{
   align-items: center;
   background: rgba(0, 0, 0, 0.93);
   flex-direction: column;
   height:300px;
   justify-content: space-around;
+  left:-499px;
   width:200px;
   top:23px;
+  transition: 500ms ease;
   
   button{
     padding:10% 0;
@@ -130,7 +134,6 @@ nav{
     padding: 0 2% 0 1%;
   }
   
-  
   .fa-chevron-left{
     font-size:3rem;
   }
@@ -145,17 +148,12 @@ nav{
   }
 }
 
-.about .arrow-container{
-  top:45%;
-}
-
-
 @media(max-width:500px){
   .mobile-nav{
     display:flex;
   }
   
-  nav{
+  .menu{
     display:none
   }
 }

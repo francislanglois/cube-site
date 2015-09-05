@@ -31,6 +31,12 @@ function rotateSides(yAngle){
   document.getElementById('cube').style[prop] = 'translateZ(-50vw) rotateY('+yAngle+'deg)';
 }
 
+function removeMobileNav(){
+  //if the nav bar has the class of expand (for mobile) then it removes that class to hide the menu after something has been clicked on
+  if($('.responsive-menu').hasClass('expand')){
+    $('.responsive-menu').removeClass('expand');
+  }
+}
 
 $('nav button').on('click', function(){
   
@@ -39,10 +45,7 @@ $('nav button').on('click', function(){
   //remove any class from the cube and adds the class that was in the variable currentSide
   $('#cube').removeClass().addClass(currentSide);
   
-  //if the nav bar has the class of expand (for mobile) then it removes that class to hide the menu after something has been clicked on
-  if($('.responsive-menu').hasClass('expand')){
-    $('.responsive-menu').removeClass('expand');
-  }
+  removeMobileNav();
   
   //sets the yAngle based on which nav bar button has been pushed
   if($(this).attr('class') === 'show-right'){
@@ -104,11 +107,6 @@ $('.arrow-container button').on('click', function(){
   setColorScheme(yAngle);
 });
 
-
-function yAngleChecker(init){
-  
-}
-
 var currentSelection = '';
 
 function checkWidth(init){
@@ -124,7 +122,7 @@ function checkWidth(init){
     if(!init){
       $('.peice-1').removeClass('displayed-peice').removeClass('hidden');
       $('.peice-2').removeClass('displayed-peice').removeClass('hidden');
-      $('.peice-3').removeClass('displayed-peice').removeClass('hidden'); 
+      $('.peice-3').removeClass('displayed-peice').removeClass('hidden');
     }
   }
 }
@@ -152,8 +150,8 @@ $('.peice-buttons button').on('click', function(){
   }
 });
 
-$('.left-arrow').on('click', function(){
-  
+$('html').on('click', function(){
+  removeMobileNav();
 });
 
 $(document).ready(function(){
@@ -164,8 +162,11 @@ $(document).ready(function(){
   });
   
   $(function(){
-    $('.menu-btn').click(function(){
+    $('.menu-btn').click(function(event){
+      event.stopPropagation();
       $('.responsive-menu').toggleClass('expand')
-    })
-  })
+      
+    });
+  });
+  
 });

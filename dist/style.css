@@ -556,6 +556,12 @@ nav {
   position: absolute;
   top: 10px;
   z-index: 1; }
+  .mobile-nav .expand {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    left: -25px;
+    top: 45px; }
 
 .menu-btn div {
   font-size: 1.8rem;
@@ -576,12 +582,6 @@ nav {
   width: 19px;
   z-index: 99; }
 
-.expand {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  left: -1px; }
-
 .responsive-menu {
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -594,8 +594,10 @@ nav {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  left: -499px;
   width: 200px;
-  top: 23px; }
+  top: 23px;
+  transition: 500ms ease; }
   .responsive-menu button {
     padding: 10% 0;
     width: 100%; }
@@ -633,15 +635,12 @@ nav {
   .arrow-container .fa-chevron-left {
     padding: 10px; }
 
-.about .arrow-container {
-  top: 45%; }
-
 @media (max-width: 500px) {
   .mobile-nav {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-  nav {
+  .menu {
     display: none; } }
 
 .home {
@@ -1195,7 +1194,8 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  background: gray; }
+  background: gray;
+  overflow: hidden; }
 
 section {
   height: 100%;
