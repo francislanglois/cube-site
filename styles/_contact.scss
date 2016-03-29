@@ -16,74 +16,15 @@
     text-align: center;
     width: 100%;
   }
-  form{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:60%;
-  }
-  
-  label{
-    align-self: flex-start;
-    font-size: 2rem;
-    margin: 2% 0 1%;
-    padding-left: 30%;
-    white-space: pre;
-  }
-  
-  input,
-  textarea{
-    background:rgba(190, 190, 190, 0.8);
-    border: none;
-    border-radius: 5px;
-    color:rgb(40,40,40);
-    font-size:1.5rem;
-    height: 3rem;
-    padding-left:10px;
-    width: 40%;
-    min-width:200px;
-  }
-  
-  input:focus,
-  textarea:focus{
-    outline-color: $orange;
-    box-shadow:$orange;
-  }
-  
-  textarea{
-    height: 175px;
-    padding-top: 10px;
-  }
+
   .name{
     padding-top:0;
   }
-  
-  .submit{
-    background: rgba(30, 30, 30, 0.9);
-    border:none;
-    border-radius:5px;
-    color:$orange;
-    cursor: pointer;
-    height: 4rem;
-    margin-top: 20px;
-    width: 12rem;
-    transition: 0.5s all;
-  }
-  
-  .submit:hover{
-    background: rgba(20, 20, 20, 0.9);
-    color: lighten($orange, 15%);
-  }
-  ::-webkit-input-placeholder{
-    color:rgba(40, 40, 40, 0.9);
-  }
+
   .contact-info{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    width:30%;
+    margin-top: 30vh;
+    text-align: center;
+    width:100%;
     min-width:280px;
   }
   
@@ -96,7 +37,7 @@
   .social{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
   }
   
@@ -118,6 +59,7 @@
     height:40px;
     padding-top:4.5px;
     transition: all 1s;
+    z-index: 10;
   }
   
   a:hover{

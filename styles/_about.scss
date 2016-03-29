@@ -1,152 +1,241 @@
-.about{
-  display:flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  position:absolute;
-  
-  .about-content{
-    width: 60%;
-    min-width:490px;
-    padding-left:5%;
-  }
-  
-  .skills{
-    width:40%;
-    min-width:200px;
-  }
-  
-  p{
-    font-size: 1.6rem;
-    width: 90%;
-  }
-  
-  span{
-    font-size: 1.6rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
+.project{
+  height:100%;
+  background: url("../assets/icon-charcoal.png");
+  background-repeat: no-repeat;
+  background-size:85%;
+  background-position-x:215%;
+  background-position-y:10%;
+  padding-left:0;
   
   h2{
-    font-size:2.5rem;
+    color: $blue;
+    font-family:"Century Gothic", sans-serif;
+    font-size:1.7rem;
+    text-align:left;
   }
-  
-  h3{
-    font-size: 2rem;
-  }
-  
-  span,
-  h2,
-  h3{
-    color:$purple;
-  }
-  
-  ul{
+  .portfolio-peices{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-    width:315px;
+    align-items: center;
+    justify-content: center;
+    height:100%;
   }
   
-  li{
-    font-size:1.5rem;
-    margin:3%;
-  }
-  
-  img{
-    height: 60px;
-    width: 60px;
-  }
-  
-  .resume-button{
-    background: rgba(35, 35, 35, 1);
-    border: 0px none;
-    color: $purple;
-    font-size:2rem;
-    border-radius:5px;
-    padding:2%;
-    position: relative;
-    bottom:-80%;
-    right:5%;
-  }
-  
-  .resume-button:hover{
-    background: rgba(20, 20, 20, 1);
-  }
-  
-  .short-contact{
-    display: flex;
-    flex-direction: row;
-    width:100%;
+  .peice-buttons{
+    width:0;
+    height:0;
+    display: none;
     
-    div{
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      justify-content: center;
-      width:100%;
-    }
-    
-    img{
-      height:100px;
-      width:100px;
-      border-radius: 50%;
-      margin-right:5%;
-    }
-    
-    p{
-      margin:0;
-    }
-  }
-  
-  @media(max-width:830px){
-    padding-left:0;
-    p{
-      width:100%;
-    }
-    
-    .skills{
-      display:none;
+    button{
       width:0;
       height:0;
+      display: none;
+      color:white;
     }
     
-    .about-content{
-      width:90%;
-      min-width:320px;
-      padding:0;
-      margin-left:15%;
+    .selected{
+      color:$blue;
+    }
+  }
+  
+  .peice-1,
+  .peice-2,
+  .peice-3{
+    display:flex;
+    flex-direction: column;
+    width: 270px;
+    margin: 0 1% 5%;
+    height:440px;
+    
+    p{
+      font-size: 1.5rem;
     }
     
-    .resume-button{
-      bottom:-90%
+    .buttons{
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom:5%;
+    }
+    
+    button{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      background: rgba(55, 55, 55, 0.9);
+      border:none;
+      border-radius: 5px;
+      color:$blue;
+      cursor: pointer;
+      height: 4rem;
+      justify-content: center;
+      margin-top: 20px;
+      transition: 0.5s all linear;
+      width:11rem;
+    }
+    
+    button:hover{
+      background: rgba(40, 40, 40, 0.9);
+      color: darken($blue, 15%);
+    }
+    
+    h4{
+      margin:0;
+    }
+    
+    .source-code{
+      margin-left:5%;
+    }
+    
+    .live-site{
+      margin-left:5px;
+      width:7rem;
+    }
+    
+    i{
+      font-size:2.5rem;
+    }
+    
+    a{
+      text-decoration: none;
+    }
+  }
+  
+  .peice-img{
+    height:175px;
+    overflow: hidden;
+  }
+  
+  .peice-1 .peice-img img,
+  .peice-2 .peice-img img,
+  .peice-3 .peice-img img{
+    display:block;
+    height:175px;
+    overflow:hidden;
+    position:relative;
+    width:270px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mask{
+    background: rgba(40, 40, 40, 0.6);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height:175px;
+    left:0;
+    opacity: 0;
+    overflow:hidden;
+    position:relative;
+    top:-175px;
+    width:270px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mask h4{
+    color:$blue;
+    font-size:3.5rem;
+  }
+  
+  .mask h5{
+    color:white;
+    font-size:2.5rem;
+    margin:0;
+  }
+  
+  .peice-1 .peice-img:hover img,
+  .peice-2 .peice-img:hover img,
+  .peice-3 .peice-img:hover img{
+    transform:translateX(270px);
+  }
+  
+  .peice-1 .peice-img:hover .mask,
+  .peice-2 .peice-img:hover .mask,
+  .peice-3 .peice-img:hover .mask{
+    transform: translateX(0px);
+    opacity:1;
+  }
+  
+  @media(max-width: 940px){
+    
+    .peice-1,
+    .peice-2,
+    .peice-3{
+      .buttons{
+        position:initial;
+      }
+    }
+    
+    .portfolio-peices{
+      align-items: center;
+    }
+    
+    .hidden{
+      display: none;
+      height:0;
+      width:0;
+    }
+    
+    .displayed-peice{
+      width:70%;
+      margin:0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left:15%;
+    }
+    
+    .peice-content{
+      width:270px;
+    }
+    
+    .peice-buttons{
+      width:25%;
+      height:auto;
+      display: flex;
+      flex-direction: column;
+      
+      button{
+        width:100%;
+        height:auto;
+        display:block;
+        background: none;
+        border:none;
+      }
+      
+      button:hover,
+      button:focus,
+      button:active{
+        cursor: pointer;
+        outline-color: transparent;
+        box-shadow: none;
+      }
+      
+      h4{
+        font-size: 1.6rem;
+        margin:3% 0;
+      }
     }
   }
   
   @media(max-width:500px){
-    .short-contact img{
-      display:none;
+    .portfolio-peices{
+      align-items: center;
+      flex-direction: column;
+      margin-left:1%;
     }
     
-    .resume-button{
-      bottom:-90%;
-      right:15%;
-    }
-  }
-  
-  @media(max-width:380px){
-    .about-content{
-      min-width:280px;
-      margin:0;
+    .peice-1,
+    .peice-2,
+    .peice-3{
+      padding:0;
+      margin-top:2%;
     }
     
-    .short-contact,
-    .resume-button{
-      display:none;
-      width:0;
-      height:0;
+    .peice-buttons{
+      width:90%;
+      flex-direction: row;
     }
   }
 }

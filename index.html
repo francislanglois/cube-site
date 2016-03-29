@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/favicon.png" type="image/x-icon">
   <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <div class="mobile-nav">
@@ -21,9 +21,9 @@
     </div>
     <nav class="responsive-menu">
       <button class="show-front">Home</button>
-      <button class="show-right">My Work</button>
+      <button class="show-right">Work</button>
+      <button class="show-back">Projects</button>
       <button class="show-left">Contact</button>
-      <button class="show-back">About Me</button>
       <!-- <button class="show-top">Top</button>
       <button class="show-bottom">Bottom</button> -->
     </nav>
@@ -31,9 +31,9 @@
   
   <nav class="menu">
     <button class="show-front" data-hover="HOME">Home</button>
-    <button class="show-right" data-hover="MY WORK">My Work</button>
+    <button class="show-right" data-hover="WORK">Work</button>
+    <button class="show-back" data-hover="PROJECTS">Projects</button>
     <button class="show-left" data-hover="CONTACT">Contact</button>
-    <button class="show-back" data-hover="ABOUT ME">About Me</button>
     <!-- <button class="show-top">Top</button>
     <button class="show-bottom">Bottom</button> -->
   </nav>
@@ -44,11 +44,23 @@
     <div id="cube">
       <div class="face front">
         <section class="home">
-          <h1><span class="colored-header">Francis</span> Lang<span class="colored-header">|</span>ois</h1>
-          <h3>{web developer}</h3>
+          <h1><span class="colored-header">Francis</span> Lang<span class="colored-header">L</span>ois</h1>
+          <h3>{front-end web developer}</h3>
           <div class="short-bio">
-            <p>I am a web developer focused on building beautiful and responsive websites. I always push myself and the technology I know to create something people will take pleasure in using.</p>
-            <p>I enjoy interacting with clients and finding out how we can meet their needs to be able to build the technology that helps them. With my marketing & business background I understand that there's always somebody behind the code that we build.</p>
+            <p>I am a front-end developer based out of Toronto Canada. I work with agencies and companies in the Toronto area as well as a remote contractor for companies located worldwide. I love beautiful designs and my goal is to make the design team's vision a reality while keeping code DRY, modular and maintainable.</p>
+            <p>On my own time I experiment with JavaScript and look for ways to use new frameworks in my workflow.</p>
+            <h2>Development</h2>
+            <h3>Skills</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Sass/Less</li>
+              <li>Gulp/Grunt</li>
+              <li>Git</li>
+              <li>jQuery</li>
+              <li>VueJS</li>
+            </ul>
           </div><!-- .about-me -->
           <div class="arrow-container">
             <button class="left-arrow"><i class="fa fa-chevron-left"></i></button>
@@ -57,38 +69,106 @@
         </section> <!-- .home -->
       </div> <!-- .front .face-->
       <div class="face back">
-        <section class="about">
-          <div class="about-content">
-            <h2>About Me</h2>
-            <p>My name is <span>Francis Langlois</span>, I am a web developer located in Toronto. My passion for coding stems from my desire to find a creative, digital solution to meet a clients’ needs. In addition to my love for technology, I have a background in business marketing and process management. I have previously worked on teams that utilized <span>Agile</span>, <span>Lean</span>, <span>Six Sigma</span>, and the <span>SLQ2CQ</span> frameworks.</p>
-            <p>I’ve also used a variety of technologies such as <span>Gulp</span>, <span>Grunt</span>, <span>SASS</span>, <span>PHP/Wordpress</span>, and <span>Git</span>. In addition to these technologies I use <span>Javascript</span>, <span>HTML5</span> and <span>CSS3</span> to create some neat web apps. I have a drive for learning new tools and languages such as, <span>Ruby</span> and <span>Angular</span>, and I am constantly seeking out opportunities to improve my skills.</p>
-            <div class="short-contact">
-              <img src="assets/profilepic.jpg" alt="Profile Pic of Myself">
-              <div>
-                <p><span>e:</span> francis.langlois@gmail.com</p>
-                <p><span>ph:</span> 647-678-5854</p>
-              </div>
+        <section class="project">
+<div class="portfolio-peices">
+            <div class="peice-buttons">
+              <button class="peice-1-button"><h4>Responsive Gallery</h4></button>
+              <button class="peice-2-button"><h4>API Challenge</h4></button>
+              <button class="peice-3-button"><h4>PSD Conversion</h4></button>
             </div>
-          </div>
-          <div class="skills">
-            <h3>Technical Skills</h3>
-            <ul>
-              <li><img src="assets/js-black-white.png" alt="JavaScript Logo" title="JavaScript"></li>
-              <li><img src="assets/html5-black-white.png" alt="HTML5 Logo" title="HTML5"></li>
-              <li><img src="assets/css3-black-white.png" alt="CSS3 Logo" title="CSS3"></li>
-              <li><img src="assets/jquery-black-white.png" alt="jQuery Logo" title="jQuery"></li>
-              <li><img src="assets/ruby-black-white.png" alt="Ruby Logo" title="Ruby"></li>
-              <li><img src="assets/wordpress.png" alt="Wordpress Logo" title="Wordpress"></li>
-              <li><img src="assets/git-black-white.png" alt="Git Logo" title="Git"></li>
-              <li><img src="assets/github-black-white.png" alt="Github Logo" title="Github"></li>
-              <li><img src="assets/gulp-black-white.png" alt="Gulp Logo" title="Gulp"></li>
-            </ul>
-          </div>
-          <button class="resume-button">Resume</button>
+            <div class="peice-1">
+              <a href="http://www.hackerpets.com" target="_blank">
+                <div class="peice-img">
+                  <img src="assets/pic1a.png" alt="">
+                  <div class="mask">
+                    <h5>View</h5>
+                    <h4>HackerPets</h4>
+                    <h5>Live</h5>
+                  </div>
+                </div>
+              </a>
+              <div class="peice-content">
+                <h2>Responsive Gallery</h2>
+                <p>Here we created our own responsive gallery. We created an interactive modal using a bit of Javascript to showcase our furry friends and their owners.</p>
+                <div class="buttons">
+                  <a href="https://github.com/francislanglois/week4ProjectHackerYou" target="_blank">
+                    <button>
+                      <i class="fa fa-github"></i>
+                      <h4 class="source-code">Source Code</h4>
+                    </button>
+                  </a>
+                  <a href="http://www.hackerpets.com" target="_blank">
+                    <button class="live-site">
+                      <h4>Live Site</h4>
+                    </button>
+                  </a>
+                </div><!-- .buttons -->
+              </div>
+            </div> <!-- .peice-1 -->
+            <div class="peice-2">
+              <a href="http://koala-coders.github.io/foursquare-wifi/" target="_blank">
+                <div class="peice-img">
+                  <img src="assets/pic2a.png" alt="">
+                  <div class="mask">
+                    <h5>View</h5>
+                    <h4>WiFi Finder</h4>
+                    <h5>Live</h5>
+                  </div>
+                </div>
+              </a>
+              <div class="peice-content">
+                <h2>API Challenge</h2>
+                <p>We were challenged to use the data from an API to populate a map of the free WiFi in a geographic area. Working as a team we came up with a solution using the Foursquare API and designed a mobile first web app!</p>
+                <div class="buttons">
+                  <a href="https://github.com/francislanglois/foursquare-wifi" target="_blank">
+                    <button>
+                      <i class="fa fa-github"></i>
+                      <h4 class="source-code">Source Code</h4>
+                    </button>
+                  </a>
+                  <a href="http://koala-coders.github.io/foursquare-wifi/" target="_blank">
+                    <button class="live-site">
+                      <h4>Live Site</h4>
+                    </button>
+                  </a>
+                </div><!-- .buttons -->
+              </div>
+            </div> <!-- .peice-2 -->
+            <div class="peice-3">
+              <a href="http://francislanglois.github.io/creativeagencyhome/" target="_blank">
+                <div class="peice-img">
+                  <img src="assets/pic3a.png" alt="">
+                  <div class="mask">
+                    <h5>View</h5>
+                    <h4>ELRUMI</h4>
+                    <h5>Live</h5>
+                  </div>
+                </div>
+              </a>
+              <div class="peice-content">
+                <h2>PSD Conversion</h2>
+                <p>The objective was to take a PSD and convert it into a beautiful and responsive website. I used some Javascript and CSS to add some little touches to the site because, sometimes the little touches make the greatest impact.</p>
+                <div class="buttons">
+                  <a href="https://github.com/francislanglois/week2project/tree/master/Creative%20Agency" target="_blank">
+                    <button>
+                      <i class="fa fa-github"></i>
+                      <h4 class="source-code">Source Code</h4>
+                    </button>
+                  </a>
+                  <a href="http://francislanglois.github.io/creativeagencyhome/" target="_blank">
+                    <button class="live-site">
+                      <h4>Live Site</h4>
+                    </button>
+                  </a>
+                </div><!-- .buttons -->
+              </div>
+            </div> <!-- .peice-3 -->
+          </div> <!-- .portfolio-peices -->
           <div class="arrow-container">
             <button class="left-arrow"><i class="fa fa-chevron-left"></i></button>
             <button class="right-arrow"><i class="fa fa-chevron-right"></i></button>
           </div>
+
         </section>
       </div><!-- .back .face -->
       <div class="face right">
@@ -199,8 +279,8 @@
             <p><span>e:</span> francis.langlois<span>@</span>gmail.com</p>
             <p><span>ph:</span> 647-678-5854</p>
             <div class="social">
-              <a href="https://www.facebook.com/webdevfrancis?ref=aymt_homepage_panel" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="https://twitter.com/intent/tweet?screen_name=frankylanglois"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.github.com/francislanglois" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://codepen.io/francislang" target="_blank"><i class="fa fa-codepen  "></i></a>
               <a href="https://www.linkedin.com/profile/view?id=AAMAABARTDwB6rVUKAlHDVVY_ccq28FJJ1KS6Xc&trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin"></i></a>
               <a href="mailto:francis.langlois@gmail.com"><i class="fa fa-envelope-o"></i></a>
             </div><!-- .social -->
@@ -215,12 +295,6 @@
       <div class="face bottom">Bottom</div> -->
     </div> <!-- .top .face -->
   </div> <!-- #cube -->
-  <!-- <div id="pyramid">
-  <div class="pyramid-front"></div>
-  <div class="pyramid-right"></div>
-  <div class="pyramid-left"></div>
-  <div class="pyramid-base"></div>
-</div> <!-- #pyramid --> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <script src="scripts/script.js"></script>
