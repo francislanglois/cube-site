@@ -12,11 +12,13 @@
     font-family:"Century Gothic", sans-serif;
     font-size:1.7rem;
     text-align:left;
+    margin: 15px 0 0;
   }
   .portfolio-peices{
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     height:100%;
   }
@@ -38,13 +40,11 @@
     }
   }
   
-  .peice-1,
-  .peice-2,
-  .peice-3{
+  .work-peice{
     display:flex;
     flex-direction: column;
     width: 270px;
-    margin: 0 1% 5%;
+    margin: 0 1%;
     
     p{
       font-size: 1.5rem;
@@ -77,9 +77,7 @@
     overflow: hidden;
   }
   
-  .peice-1 .peice-img img,
-  .peice-2 .peice-img img,
-  .peice-3 .peice-img img{
+  .work-peice .peice-img img{
     display:block;
     height:175px;
     overflow:hidden;
@@ -116,24 +114,18 @@
     margin:0;
   }
   
-  .peice-1 .peice-img:hover img,
-  .peice-2 .peice-img:hover img,
-  .peice-3 .peice-img:hover img{
+  .work-peice .peice-img:hover img{
     transform:translateX(270px);
   }
   
-  .peice-1 .peice-img:hover .mask,
-  .peice-2 .peice-img:hover .mask,
-  .peice-3 .peice-img:hover .mask{
+  .work-peice .peice-img:hover .mask{
     transform: translateX(0px);
     opacity:1;
   }
   
   @media(max-width: 940px){
     
-    .peice-1,
-    .peice-2,
-    .peice-3{
+    .work-peice{
       .buttons{
         position:initial;
       }
@@ -198,9 +190,7 @@
       margin-left:1%;
     }
     
-    .peice-1,
-    .peice-2,
-    .peice-3{
+    .work-peice{
       padding:0;
       margin-top:2%;
     }
