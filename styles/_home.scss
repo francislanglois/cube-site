@@ -26,6 +26,19 @@
   }
   .short-bio{
     width:40%;
+    // display: inline-block;
+    p:first-child {
+      margin-top: 10px;
+    }
+  }
+  .development-list {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;  
+
+    h2 {
+      margin: 0;
+    }
   }
   p{
     font-size:1.8rem;
