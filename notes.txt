@@ -1,5 +1,4 @@
 place development on homepage
-make work peices look better on smaller screens
 update projects section to include JS game
 make contact email bigger
 make nav show which section you're on
