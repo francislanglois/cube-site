@@ -9,7 +9,7 @@ function setColorScheme(yAngle){
     $('nav button').css('color', 'rgba(225, 105, 10, 1)');
   }
   else if (yAngle === -180 || yAngle === 180){
-    $('nav button').css('color', 'rgba(215, 20, 75, 1)');
+    $('nav button').css('color', '#B23AEE');
   }
   else {
     $('nav button').css('color', 'rgba(60, 185, 15, 1)');

@@ -8,7 +8,7 @@
   padding-left:0;
   
   h2{
-    color: $blue;
+    color: $purple;
     font-family:"Century Gothic", sans-serif;
     font-size:1.7rem;
     text-align:left;
@@ -34,13 +34,11 @@
     }
     
     .selected{
-      color:$blue;
+      color:$purple;
     }
   }
   
-  .peice-1,
-  .peice-2,
-  .peice-3{
+  .project-peice{
     display:flex;
     flex-direction: column;
     width: 270px;
@@ -62,10 +60,10 @@
       display: flex;
       align-items: center;
       flex-direction: row;
-      background: rgba(55, 55, 55, 0.9);
+      background: white;
       border:none;
       border-radius: 5px;
-      color:$blue;
+      color:black;
       cursor: pointer;
       height: 4rem;
       justify-content: center;
@@ -76,7 +74,7 @@
     
     button:hover{
       background: rgba(40, 40, 40, 0.9);
-      color: darken($blue, 15%);
+      color: darken($purple, 15%);
     }
     
     h4{
@@ -134,7 +132,7 @@
   }
   
   .mask h4{
-    color:$blue;
+    color:$purple;
     font-size:3.5rem;
   }
   
@@ -177,14 +175,14 @@
       width:0;
     }
     
-    .displayed-peice{
-      width:70%;
-      margin:0;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding-left:15%;
-    }
+    // .displayed-peice{
+    //   width:70%;
+    //   margin:0;
+    //   display: flex;
+    //   justify-content: flex-start;
+    //   align-items: flex-start;
+    //   padding-left:15%;
+    // }
     
     .peice-content{
       width:270px;
@@ -195,6 +193,7 @@
       height:auto;
       display: flex;
       flex-direction: column;
+      display: none;
       
       button{
         width:100%;
@@ -232,10 +231,13 @@
       padding:0;
       margin-top:2%;
     }
-    
-    .peice-buttons{
+    .peice-content p {
+      display: none;
+    }
+    .peice-buttons, .project-peice .buttons{
       width:90%;
       flex-direction: row;
+      display: none;
     }
   }
 }

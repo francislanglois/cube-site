@@ -1,4 +1,3 @@
 place development on homepage
 update projects section to include JS game
-make contact email bigger
 make nav show which section you're on
