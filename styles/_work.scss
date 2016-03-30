@@ -45,7 +45,7 @@
   .work-peice{
     display:flex;
     flex-direction: column;
-    width: 270px;
+    width: 29%;
     margin: 0 2%;
     
     p{
@@ -84,7 +84,6 @@
     height:175px;
     overflow:hidden;
     position:relative;
-    width:270px;
     transition: all 0.3s ease-in-out;
   }
   
@@ -100,7 +99,7 @@
     overflow:hidden;
     position:relative;
     top:-175px;
-    width:270px;
+    width:100%;
     transition: all 0.3s ease-in-out;
   }
   
@@ -117,7 +116,7 @@
   }
   
   .work-peice .peice-img:hover img{
-    transform:translateX(270px);
+    transform:translateX(101%);
   }
   
   .work-peice .peice-img:hover .mask{
@@ -130,6 +129,9 @@
     .work-peice{
       .buttons{
         position:initial;
+      }
+      a {
+        width: 100%;
       }
     }
     
@@ -168,6 +170,7 @@
         display:block;
         background: none;
         border:none;
+        z-index: 10;  
       }
       
       button:hover,
@@ -189,6 +192,7 @@
     .portfolio-peices{
       align-items: center;
       flex-direction: column;
+      justify-content: flex-start;
       margin-left:1%;
     }
     
@@ -200,6 +204,7 @@
     .peice-buttons{
       width:90%;
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 }

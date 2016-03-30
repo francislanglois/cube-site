@@ -114,39 +114,36 @@ function checkWidth(init){
     $('.peice-1-button').addClass('selected');
     $('.peice-2-button').removeClass('selected');
     $('.peice-3-button').removeClass('selected');
+    $('.work-peice').addClass('hidden').removeClass('displayed-peice');
     $('.peice-1').addClass('displayed-peice').removeClass('hidden');
-    $('.peice-2').addClass('hidden').removeClass('displayed-peice');
-    $('.peice-3').addClass('hidden').removeClass('displayed-peice');
   }
   else{
     if(!init){
-      $('.peice-1').removeClass('displayed-peice').removeClass('hidden');
-      $('.peice-2').removeClass('displayed-peice').removeClass('hidden');
-      $('.peice-3').removeClass('displayed-peice').removeClass('hidden');
+      $('.work-peice').removeClass('displayed-peice').removeClass('hidden');
     }
   }
 }
 $('.peice-buttons button').on('click', function(){
-  $('.peice-1-button').removeClass('selected');
+  $('.peice-buttons button').removeClass('selected');
   $(this).addClass('selected');
   
   $(currentSelection).removeClass('selected');
   currentSelection = $(this);
-  
+    $('.work-peice').removeClass('displayed-peice').addClass('hidden');
   if($(this).hasClass('peice-1-button')){
     $('.peice-1').removeClass('hidden').addClass('displayed-peice');
-    $('.peice-2').removeClass('displayed-peice').addClass('hidden');
-    $('.peice-3').removeClass('displayed-peice').addClass('hidden');
   }
   else if ($(this).hasClass('peice-2-button')){
     $('.peice-2').removeClass('hidden').addClass('displayed-peice');
-    $('.peice-1').removeClass('displayed-peice').addClass('hidden');
-    $('.peice-3').removeClass('displayed-peice').addClass('hidden');
   }
   else if($(this).hasClass('peice-3-button')){
     $('.peice-3').removeClass('hidden').addClass('displayed-peice');
-    $('.peice-1').removeClass('displayed-peice').addClass('hidden');
-    $('.peice-2').removeClass('displayed-peice').addClass('hidden');
+  }
+  else if($(this).hasClass('peice-4-button')){
+    $('.peice-4').removeClass('hidden').addClass('displayed-peice');
+  }
+  else if($(this).hasClass('peice-5-button')){
+    $('.peice-5').removeClass('hidden').addClass('displayed-peice');
   }
 });
 
